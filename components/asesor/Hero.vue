@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <div class="relative w-full h-[46rem]">
+        <div class="relative w-full h-[50rem]">
             <div class="relative w-full h-full flex items-center">
                 <div class="absolute inset-0">
                     <figure class="relative w-full h-full">
@@ -10,8 +10,8 @@
 
                 <div class="relative px-20 s:px-240">
                     <h1 class="relative flex flex-col items-start text-white js-t-fades">
-                        <span class="inline-flex text-35 s:text-45 leading-none tracking-[-2.4px]">Asesor Inteligente</span>
-                        <span class="inline-flex text-40 s:text-60 leading-none tracking-[-2.4px]">Bioceres Online</span>
+                        <span class="mont font-semibold inline-flex text-35 s:text-45 leading-none tracking-[-2.4px]">Asesor Inteligente</span>
+                        <span class="mont font-bold inline-flex text-40 s:text-60 leading-none tracking-[-2.4px]">Bioceres Online</span>
                     </h1>
                 </div>
             </div>

@@ -3,7 +3,7 @@
         <div class="relative pt-100 s:pt-80 pb-100 s:pb-170">
             <div class="relative px-20 s:px-240">
                 <div class="relative max-w-[30rem] s:max-w-[36rem] pb-60">
-                    <p class="font-normal text-18 leading-[1.2] tracking-[-0.72px] js-t-fades">
+                    <p class="inter font-normal text-18 leading-[1.35] tracking-[-0.72px] js-t-fades">
                         Seleccioná la información para que nuestro asesor inteligente 
                         te recomiende <span class="font-semibold">como sacar el mejor provecho de tu campo.</span>
                     </p>
@@ -12,7 +12,7 @@
                 <div class="relative grid grid-cols-1 s:grid-cols-2 gap-80 s:gap-100">
                     <div class="relative flex flex-col justify-center js-t-fades">
                         <div class="relative pb-30">
-                            <h2 class="relative font-semibold text-25 leading-none tracking-[-1px]">1. Características</h2>
+                            <h2 class="relative inter font-semibold text-25 leading-none tracking-[-1px]">1. Características</h2>
                         </div>
 
                         <div class="relative pb-50">
@@ -22,9 +22,9 @@
                                     <div class="relative pb-10 text-[#25284A]">
                                         <p class="text-15 leading-none tracking-[-0.6px]">Tu región</p>
                                     </div>
-                                    <div class="relative font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                    <div class="relative inter font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                         <div class="relative">
-                                            <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                            <select class="select-input inter relative bg-transparent appearance-none cursor-pointer">
                                                 <option selected>Oeste de Bs As</option>
                                                 <option>Opción 1</option>
                                                 <option>Opción 2</option>
@@ -42,11 +42,11 @@
 
                                 <div class="relative">
                                     <div class="relative pb-10 text-[#25284A]">
-                                        <p class="text-15 leading-none tracking-[-0.6px]">El ambiente</p>
+                                        <p class="inter text-15 leading-none tracking-[-0.6px]">El ambiente</p>
                                     </div>
-                                    <div class="relative font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                    <div class="relative inter font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                         <div class="relative">
-                                            <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                            <select class="select-input inter relative bg-transparent appearance-none cursor-pointer">
                                                 <option selected>Entre 2.500-4.000 kg/ha</option>
                                                 <option>Opción 1</option>
                                                 <option>Opción 2</option>
@@ -64,11 +64,11 @@
 
                                 <div class="relative">
                                     <div class="relative pb-10 text-[#25284A]">
-                                        <p class="text-15 leading-none tracking-[-0.6px]">Preferencia de siembra</p>
+                                        <p class="inter font-normal text-15 leading-none tracking-[-0.6px]">Preferencia de siembra</p>
                                     </div>
-                                    <div class="relative font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                    <div class="relative inter font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                         <div class="relative">
-                                            <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                            <select class="select-input inter font-normal relative bg-transparent appearance-none cursor-pointer">
                                                 <option selected>Temprana</option>
                                                 <option>Opción 1</option>
                                                 <option>Opción 2</option>
@@ -86,11 +86,11 @@
 
                                 <div class="relative">
                                     <div class="relative pb-10 text-[#25284A]">
-                                        <p class="text-15 leading-none tracking-[-0.6px]">Tipo de año</p>
+                                        <p class="inter font-normal text-15 leading-none tracking-[-0.6px]">Tipo de año</p>
                                     </div>
-                                    <div class="relative font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                    <div class="relative inter font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                         <div class="relative">
-                                            <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                            <select class="select-input inter font-normal relative bg-transparent appearance-none cursor-pointer">
                                                 <option selected>Neutro</option>
                                                 <option>Opción 1</option>
                                                 <option>Opción 2</option>
@@ -117,7 +117,7 @@
                     <div class="relative js-t-fades">
                         <div class="relative p-40 s:p-60 shadow-card bg-[#FFFFFF] rounded-[2.5rem] s:rounded-[5rem]">
                             <div class="relative pb-30">
-                                <h2 class="font-semibold text-[#25284A] text-22 leading-none tracking-[-0.88px]">Recomendación para tu campo</h2>
+                                <h2 class="inter font-semibold text-[#25284A] text-22 leading-none tracking-[-0.88px]">Recomendación para tu campo</h2>
                             </div>
 
                             <div class="relative grid grid-cols-2 gap-x-16 gap-y-20">
@@ -131,8 +131,8 @@
                                         </svg>
                                     </div>
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">Iruya HB4</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">Iruya HB4</h5>
                                     </div>
                                 </div>
 
@@ -146,8 +146,8 @@
                                         </svg>
                                     </div>
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">Iruya HB4</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">Iruya HB4</h5>
                                     </div>
                                 </div>
 
@@ -161,8 +161,8 @@
                                         </svg>
                                     </div>
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">Iruya HB4</h5>
+                                        <p class="relative inter pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">Iruya HB4</h5>
                                     </div>
                                 </div>
 
@@ -176,8 +176,8 @@
                                         </svg>
                                     </div>
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">Iruya HB4</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">Iruya HB4</h5>
                                     </div>
                                 </div>
                             </div>
@@ -186,7 +186,7 @@
 
                     <div class="relative flex flex-col justify-center js-t-fades">
                         <div class="relative pb-30">
-                            <h2 class="relative font-semibold text-25 leading-none tracking-[-1px]">2. Nutrición en suelo   </h2>
+                            <h2 class="relative inter font-semibold text-25 leading-none tracking-[-1px]">2. Nutrición en suelo   </h2>
                         </div>
 
                         <div class="relative pb-50">
@@ -194,12 +194,12 @@
                                 
                                 <div class="relative">
                                     <div class="relative pb-10 text-[#25284A]">
-                                        <p class="text-15 leading-none tracking-[-0.6px]">¿Conocés la nutrición de tu suelo?</p>
+                                        <p class="inter font-normal text-15 leading-none tracking-[-0.6px]">¿Conocés la nutrición de tu suelo?</p>
                                     </div>
 
-                                    <div class="relative w-1/2 font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                    <div class="relative w-1/2 inter font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                         <div class="relative">
-                                            <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                            <select class="select-input inter relative bg-transparent appearance-none cursor-pointer">
                                                 <option selected>Si la conozco</option>
                                                 <option>Opción 1</option>
                                                 <option>Opción 2</option>
@@ -218,11 +218,11 @@
                                 <div class="grid grid-cols-4 gap-x-90 justify-between">
                                     <div class="relative">
                                         <div class="relative pb-10 text-[#25284A]">
-                                            <p class="text-15 leading-none tracking-[-0.6px]">N</p>
+                                            <p class="inter font-medium text-15 leading-none tracking-[-0.6px]">N</p>
                                         </div>
-                                        <div class="relative font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                        <div class="relative inter font-medium text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                             <div class="relative">
-                                                <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                                <select class="select-input inter font-medium relative bg-transparent appearance-none cursor-pointer">
                                                     <option selected>10</option>
                                                     <option>20</option>
                                                     <option>30</option>
@@ -235,11 +235,11 @@
 
                                     <div class="relative">
                                         <div class="relative pb-10 text-[#25284A]">
-                                            <p class="text-15 leading-none tracking-[-0.6px]">N</p>
+                                            <p class="inter font-medium text-15 leading-none tracking-[-0.6px]">N</p>
                                         </div>
-                                        <div class="relative font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                        <div class="relative inter font-medium text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                             <div class="relative">
-                                                <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                                <select class="select-input inter font-medium relative bg-transparent appearance-none cursor-pointer">
                                                     <option selected>10</option>
                                                     <option>20</option>
                                                     <option>30</option>
@@ -252,11 +252,11 @@
 
                                     <div class="relative">
                                         <div class="relative pb-10 text-[#25284A]">
-                                            <p class="text-15 leading-none tracking-[-0.6px]">N</p>
+                                            <p class="inter font-medium text-15 leading-none tracking-[-0.6px]">N</p>
                                         </div>
-                                        <div class="relative font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                        <div class="relative inter font-medium text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                             <div class="relative">
-                                                <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                                <select class="select-input inter font-medium relative bg-transparent appearance-none cursor-pointer">
                                                     <option selected>10</option>
                                                     <option>20</option>
                                                     <option>30</option>
@@ -269,11 +269,11 @@
 
                                     <div class="relative">
                                         <div class="relative pb-10 text-[#25284A]">
-                                            <p class="text-15 leading-none tracking-[-0.6px]">N</p>
+                                            <p class="inter font-medium text-15 leading-none tracking-[-0.6px]">N</p>
                                         </div>
-                                        <div class="relative font-normal text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
+                                        <div class="relative inter font-medium text-[#3FADE1] text-15 leading-none tracking-[-0.8px]">
                                             <div class="relative">
-                                                <select class="select-input relative bg-transparent appearance-none cursor-pointer">
+                                                <select class="select-input inter font-medium relative bg-transparent appearance-none cursor-pointer">
                                                     <option selected>10</option>
                                                     <option>20</option>
                                                     <option>30</option>
@@ -297,56 +297,56 @@
                         <div class="relative p-40 s:p-60 shadow-card bg-[#FFFFFF] rounded-[2.5rem] s:rounded-[5rem]">
                             <div class="relative pb-40">
                                 <div class="relative pb-30">
-                                    <h2 class="font-semibold text-[#25284A] text-22 leading-none tracking-[-0.88px]">Nutrición recomendada</h2>
+                                    <h2 class="inter font-semibold text-[#25284A] text-22 leading-none tracking-[-0.88px]">Nutrición recomendada</h2>
                                 </div>
 
                                 <div class="relative grid grid-cols-4 gap-x-16">
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">140</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">140</h5>
                                     </div>
 
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">140</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">140</h5>
                                     </div>
 
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">140</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">140</h5>
                                     </div>
 
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">140</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">140</h5>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="relative">
                                 <div class="relative pb-30">
-                                    <h2 class="font-semibold text-[#25284A] text-22 leading-none tracking-[-0.88px]">Fertilización recomendada</h2>
+                                    <h2 class="inter font-semibold text-[#25284A] text-22 leading-none tracking-[-0.88px]">Fertilización recomendada</h2>
                                 </div>
 
                                 <div class="relative grid grid-cols-4 gap-x-16">
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">40</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">40</h5>
                                     </div>
 
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">40</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">40</h5>
                                     </div>
 
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">40</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">40</h5>
                                     </div>
 
                                     <div class="relative">
-                                        <p class="relative pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
-                                        <h5 class="relative pb-5 font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">40</h5>
+                                        <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">N</p>
+                                        <h5 class="relative pb-5 inter font-medium text-[#3FADE1] text-18 s:text-22 leading-none tracking-[-0.88px]">40</h5>
                                     </div>
                                 </div>
                             </div>
