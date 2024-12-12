@@ -1,7 +1,9 @@
 <template>
     <div class="relative">
         <SemillasHero />
-        <SemillasValueSeed />
+        <div class="relative pt-100">
+            <SemillasValueSeed />
+        </div>
     </div>
 </template>
 
