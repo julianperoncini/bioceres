@@ -129,6 +129,47 @@ export default {
     }
 }
 
+.is-lightblueTransparent {
+    .btn-text {
+        border-color: #3FADE1;
+        background-color: transparent;
+        transition: all .4s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+        color: #3FADE1;
+    }
+
+    .btn-arrow {
+        border-color: #3FADE1;
+        transition: all .5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+
+        svg {
+            path {
+                transition: all .5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+                stroke: #3FADE1;
+            }
+        }
+    }
+
+    &:hover {
+        .btn-text {
+            padding: 0rem 5.2rem;
+            background-color: #3FADE1;
+            color: #fff;
+        }
+
+        .btn-arrow {
+            border-color: #B5DC4D;
+            background-color: #B5DC4D;
+            transform: rotate(180deg);
+
+            svg {
+                path {
+                    stroke: #fff
+                }
+            }
+        }
+    }
+}
+
 .is-transparent {
     .btn-text {
         border-color: #fff;
