@@ -18,7 +18,14 @@
                         </div>
 
                         <div class="relative js-t-fades">
-                            <ButtonArrow color="lightblueTransparent" label="Mirá nuestro video" />
+                            <button @click="openModalIframe" class="btn is-lightblueTransparent relative h-[4.8rem] flex items-center inter font-medium text-16 leading-none tracking-[-0.64px]" type="button">
+                                <span class="btn-text flex items-center justify-center h-full px-40 rounded-[2.4rem] border-[0.2rem] border-solid">Mirá nuestro video</span>
+                                <span class="btn-arrow flex items-center justify-center w-[4.8rem] h-full bg-transparent rounded-full border-[0.2rem] border-solid border-[#B5DC4D]">
+                                    <svg class="w-[1.8rem] h-auto" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1.49967 6.76172L16.0243 6.76243M1.49967 6.76172L6.36173 11.6238M1.49967 6.76172L6.36173 1.90107" stroke="#B5DC4D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -51,6 +58,23 @@
                 </div>
             </section>
 
+            <div ref="modalIframe" class="fixed top-0 left-0 w-full h-full bg-black-always bg-opacity-50 z-[9999] invisible">
+                <div class="relative w-full h-full flex items-center justify-center">
+                    <div class="relative w-[80%] s:w-[60%] h-[25rem] s:h-[60rem]">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/383__4ZoNVc?si=FB7ApBONFI5WqRvx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div class="absolute top-[15rem] s:top-80 right-[4rem] s:right-120">
+                    <button @click="closeModalIframe" class="btn-close-frame cursor-pointer w-[6rem] h-[6rem] relative flex items-center justify-center bg-[#3FADE1] rounded-full overflow-hidden" type="button">
+                        <svg class="btn-close-frame-svg w-[1.65rem] s:w-[1.4rem] h-auto" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L12.9602 12.9602" stroke="#F9F7F5" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M1 12.9602L12.9602 1" stroke="#F9F7F5" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
             <!-- Sticky product bag overlay -->
             <div class="hidden s:block absolute top-0 s:right-[-7rem] h-full z-10">
                 <div class="s:sticky s:top-0 s:h-screen flex items-center justify-center js-t-fades">
@@ -73,6 +97,8 @@
 </template>
 
 <script>
+import gsap from 'gsap'
+
 export default {
     data() {
         return {
@@ -138,6 +164,26 @@ export default {
                     transition: 'transform 0.3s ease-out'
                 }
             })
+        },
+
+        openModalIframe() {
+            gsap.fromTo(this.$refs.modalIframe, {
+                autoAlpha: 0,
+            }, {
+                autoAlpha: 1,
+                duration: 0.5,
+                ease: 'power1.out'
+            })
+        },
+
+        closeModalIframe() {
+            gsap.fromTo(this.$refs.modalIframe, {
+                autoAlpha: 1,
+            }, {
+                autoAlpha: 0,
+                duration: 0.5,
+                ease: 'power1.out'
+            })
         }
     }
 }
@@ -166,4 +212,57 @@ export default {
         transform: translateY(1rem);
     }
 }
+
+.is-lightblueTransparent {
+    .btn-text {
+        border-color: #3FADE1;
+        background-color: transparent;
+        transition: all .4s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+        color: #3FADE1;
+    }
+
+    .btn-arrow {
+        border-color: #3FADE1;
+        transition: all .5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+
+        svg {
+            path {
+                transition: all .5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+                stroke: #3FADE1;
+            }
+        }
+    }
+
+    &:hover {
+        .btn-text {
+            padding: 0rem 5.2rem;
+            background-color: #3FADE1;
+            color: #fff;
+        }
+
+        .btn-arrow {
+            border-color: #B5DC4D;
+            background-color: #B5DC4D;
+            transform: rotate(180deg);
+
+            svg {
+                path {
+                    stroke: #fff
+                }
+            }
+        }
+    }
+}
+
+.btn-close-frame {
+    .btn-close-frame-svg {
+        transition: all .3s;
+    }
+}
+
+.btn-close-frame:hover {
+        .btn-close-frame-svg {
+            transform: scale(1.15) rotate(180deg); 
+        }
+    }
 </style>
