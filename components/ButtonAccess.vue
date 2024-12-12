@@ -1,6 +1,8 @@
 <template>
-    <div class="btn flex flex-col items-center font-medium text-16 leading-none tracking-[-0.64px] rounded-[2.4rem] border-[#3FADE1] border-[0.2rem] border-solid overflow-hidden cursor-pointer" :class="color ? `is-${color}` : null">
+    <div class="btn flex flex-col items-center font-medium text-16 leading-none tracking-[-0.64px] overflow-hidden cursor-pointer" :class="color ? `is-${color}` : null">
         <div class="btn-text flex py-13 px-40 relative z-2">{{ label }}</div>
+
+        <div class="btn-border absolute top-0 left-0 w-full h-full z-10 rounded-[2.4rem] border-[#3FADE1] border-[0.2rem] border-solid"></div>
 
         <div class="btn-extralinks absolute top-full left-0 w-full z-2 mt-5 opacity-0">
             <div class="relative flex flex-col items-center justify-center gap-y-20 text-white">
@@ -32,7 +34,7 @@ export default {
 .is-lightblue {
     .btn-text {
         border-color: #3FADE1;
-        background-color: #fff;
+        background-color: transparent;
         transition: all .4s cubic-bezier(0.075, 0.820, 0.165, 1.000);
         color: #3FADE1;
     }
@@ -48,17 +50,23 @@ export default {
         opacity: 0;
         transform: translateY(2rem);
     }
+    
+    .btn-border {
+        transition: all .4s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    }
 
     &:hover {
         .btn-text {
-            padding-left: 4.5rem;
-            padding-right: 4.5rem;
-            background-color: #3FADE1;
             color: #fff;
+        }
+
+        .btn-border {
+            transform: scaleX(1.1);
         }
 
         .btn-bg {
             clip-path: inset(0 0 0 0);
+            transform: scaleX(1.1);
         }
 
         .btn-extralinks {

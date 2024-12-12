@@ -15,7 +15,7 @@
                         <p class="relative text-center mont font-normal text-20 s:text-26 leading-[1.1] tracking-[-1.04px]">Conocé nuestra red de multiplicadores y descubrí al asesor más cercano a tu campo.</p>
 
                         <div class="relative mt-45">
-                            <ButtonArrow />
+                            <ButtonArrow color="white" label="Encontrá al tuyo" />
                         </div>
                     </div>
                 </div>

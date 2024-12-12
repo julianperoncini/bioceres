@@ -18,7 +18,7 @@
                     </li>
 
                     <li class="relative">
-                        <nuxt-link class="uline relative mont font-medium text-16 leading-none tracking-[-0.64px] w-full h-full" to="/">Tecnología</nuxt-link>
+                        <nuxt-link class="uline relative mont font-medium text-16 leading-none tracking-[-0.64px] w-full h-full" to="/tecnologia">Tecnología</nuxt-link>
                     </li>
 
                     <li class="relative">

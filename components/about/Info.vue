@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                <div class="relative pb-0 s:pb-100 s:pl-80 js-s-fade">
+                <div class="relative pb-[2.5rem] s:pb-100 s:pl-80 js-s-fade">
                     <p class="max-w-full s:max-w-[57rem] font-normal text-[#A0C344] text-26 leading-[1.2] tracking-[-1.04px]">Este nombre combina la palabra <strong class="font-bold">"bio"</strong>, referente a la vida, y <strong class="font-bold">"Ceres"</strong>, la diosa romana de la agricultura, reflejando así el enfoque de la empresa en la biotecnología aplicada a la agricultura.</p>
                 </div>
 

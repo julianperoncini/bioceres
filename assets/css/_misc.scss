@@ -228,6 +228,7 @@ hr {
 
 .discover-card {
     cursor: pointer;
+    transition: all .4s cubic-bezier(0.075, 0.820, 0.165, 1.000);
     
     .discover-card-figure {
         overflow: hidden;
@@ -242,6 +243,8 @@ hr {
     }
 
     &:hover {
+        transform: scaleY(1.085);
+
         .discover-card-figure {
             img {
                 transform: scale(1.1);

@@ -9,7 +9,7 @@
                 </div>
                 
                 <div class="relative w-full h-full flex items-center">
-                    <div class="relative pl-20 s:pl-240 z-3">
+                    <div class="relative mt-[-12rem] s:mt-0 pl-20 s:pl-240 z-3">
                         <div class="relative pb-50 js-t-fades">
                             <h1 class="mont font-medium relative text-[#3FADE1] text-50 leading-[1.1] tracking-[-2px]">
                                 <span class="block">Todo empieza</span>
@@ -28,7 +28,7 @@
                         <img class="w-full h-full object-contain select-none pointer-events-none" src="about-hand.png" alt="Bioceres Nosotros">
                     </figure>
 
-                    <figure class="go-down-up absolute top-[0rem] left-[25rem] w-[4.5rem] h-[4.5rem]">
+                    <figure class="go-down-up absolute top-[-5rem] s:top-[0rem] left-[10rem] s:left-[25rem] w-[3.5rem] s:w-[4.5rem] h-[3.5rem] s:h-[4.5rem]">
                         <img class="w-full h-full object-contain select-none pointer-events-none" src="bean.png" alt="Bioceres Nosotros">
                     </figure>
                 </div>

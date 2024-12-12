@@ -128,4 +128,46 @@ export default {
         }
     }
 }
+
+.is-transparent {
+    .btn-text {
+        border-color: #fff;
+        background-color: transparent;
+        transition: all .4s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+        color: white;
+    }
+
+    .btn-arrow {
+        border-color: #fff;
+        background-color: transparent;
+        transition: all .5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+
+        svg {
+            path {
+                transition: all .5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+                stroke: #fff;
+            }
+        }
+    }
+
+    &:hover {
+        .btn-text {
+            padding: 0rem 5.2rem;
+            border-color: #3FADE1;
+            background-color: #3FADE1;
+        }
+
+        .btn-arrow {
+            border-color: #B5DC4D;
+            background-color: #B5DC4D;
+            transform: rotate(180deg);
+
+            svg {
+                path {
+                    stroke: #fff
+                }
+            }
+        }
+    }
+}
 </style>

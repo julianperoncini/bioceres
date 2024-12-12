@@ -99,10 +99,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="py-30 px-100 s:px-0 w-full flex items-center justify-center js-t-fades">
-            <div class="text-center text-[#646464] inter font-light text-18 leading-none tracking-[-0.72px]">muestra resultados post selección de provincia</div>
-        </div>
     </div>
 </template>
 
