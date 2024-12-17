@@ -23,7 +23,7 @@
 
                         <div class="relative text-20 leading-none tracking-[-0.8px] pb-20 s:pb-0">
                             <div class="relative">
-                                <select class="select-input mont font-medium relative py-4 px-50 bg-transparent appearance-none cursor-pointer">
+                                <select class="select-input text-center mont font-medium relative py-4 px-50 bg-transparent appearance-none cursor-pointer">
                                     <option selected>Buenos Aires</option>
                                     <option>Opción 1</option>
                                     <option>Opción 2</option>

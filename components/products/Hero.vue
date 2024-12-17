@@ -26,7 +26,7 @@
                                 <select                           
                                     v-model="selectedCategory"
                                     @change="filterProducts"
-                                    class="select-input mont font-medium relative py-4 px-50 bg-transparent appearance-none cursor-pointer"
+                                    class="select-input text-center mont font-medium relative py-4 px-50 bg-transparent appearance-none cursor-pointer"
                                 >
                                     <option value="all">Ver todos</option>
                                     <option value="Trigo">Trigo</option>

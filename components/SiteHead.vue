@@ -65,11 +65,11 @@
                     </li>
 
                     <li class="relative">
-                        <nuxt-link class="uline relative mont font-medium text-26 leading-none tracking-[-0.64px] w-full h-full" to="/asesor-inteligente">Cultivos</nuxt-link>
+                        <nuxt-link class="uline relative mont font-medium text-26 leading-none tracking-[-0.64px] w-full h-full" to="/cultivos">Cultivos</nuxt-link>
                     </li>
 
                     <li class="relative">
-                        <nuxt-link class="uline relative mont font-medium text-26 leading-none tracking-[-0.64px] w-full h-full" to="/">Tecnología</nuxt-link>
+                        <nuxt-link class="uline relative mont font-medium text-26 leading-none tracking-[-0.64px] w-full h-full" to="/tecnologia">Tecnología</nuxt-link>
                     </li>
 
                     <li class="relative">
