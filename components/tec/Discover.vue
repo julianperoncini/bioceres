@@ -6,7 +6,7 @@
                 <div class="relative w-full s:w-[54rem] flex flex-col items-start js-s-fade">
                     <div class="relative pb-20">
                         <figure class="w-auto h-[10rem]">
-                            <img class="w-full h-full object-contain" src="sembra-evo.png" alt="">
+                            <img class="w-full h-full object-contain" src="logo_sembra.png" alt="">
                         </figure>
                     </div>
                     
@@ -29,7 +29,7 @@
                 <div class="relative w-full s:w-[54rem] flex flex-col items-start js-s-fade">
                     <div class="relative pb-20">
                         <figure class="w-auto h-[10rem]">
-                            <img class="w-full h-full object-contain" src="arpov.png" alt="">
+                            <img class="w-full h-full object-contain" src="logo_arpov.png" alt="">
                         </figure>
                     </div>
                     

@@ -7,7 +7,7 @@
                 </div>
 
                 <div class="relative grid grid-cols-1 s:grid-cols-3 items-center justify-center s:gap-x-16 gap-y-30 s:gap-y-0 pb-100 s:pb-65 js-s-fade">
-                    <article class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
+                    <nuxt-link to="/producto-detalle" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
                                 <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
@@ -34,9 +34,9 @@
                                 <Button />
                             </div>
                         </div>
-                    </article>
+                    </nuxt-link>
 
-                    <article class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
+                    <nuxt-link to="/producto-detalle" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
                                 <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
@@ -49,15 +49,15 @@
                             </div>
 
                             <p class="relative pb-10 mont font-medium text-15 leading-none tracking-[-0.6px]">Soluciones para</p>
-                            <h4 class="relative mont font-semibold text-40 leading-none tracking-[-1.6px]">TRIGO</h4>
+                            <h4 class="relative mont font-semibold text-40 leading-none tracking-[-1.6px]">SOJA</h4>
 
                             <div class="relative mt-25">
                                 <Button />
                             </div>
                         </div>
-                    </article>
+                    </nuxt-link>
 
-                    <article class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
+                    <nuxt-link to="/vicia-villosa" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
                                 <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
@@ -74,13 +74,13 @@
                             </div>
 
                             <p class="relative pb-10 mont font-medium text-15 leading-none tracking-[-0.6px]">Soluciones para</p>
-                            <h4 class="relative mont font-semibold text-40 leading-none tracking-[-1.6px]">TRIGO</h4>
+                            <h4 class="relative mont font-semibold text-40 leading-none tracking-[-1.6px]">VICIA VILLOSA</h4>
 
                             <div class="relative mt-25">
                                 <Button />
                             </div>
                         </div>
-                    </article>
+                    </nuxt-link>
                 </div>
 
                 <div class="relative w-full h-[45rem] rounded-[5rem] overflow-hidden js-s-fade">

@@ -15,16 +15,18 @@
 
                     <li class="relative">
                         <div class="cultivos-dropdown z-2 cursor-pointer flex items-center relative mont font-medium text-16 leading-none tracking-[-0.64px] w-full h-full">
-                            <span class="inline-block mr-8">
-                                Cultivos
-                            </span>
-                            <span class="inline-block">
-                                <svg class="cultivos-dropdown-arrow w-[1rem] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
-                                    <g transform="translate(8) rotate(90)">
-                                        <path fill="#3FADE1" id="Shape" class="cls-2" d="M10,1A1,1,0,0,0,8.293.293L5,3.586,1.707.293A1,1,0,1,0,.293,1.707l4,4a1,1,0,0,0,1.415,0l4-4A1,1,0,0,0,10,1Z" transform="translate(2 8) rotate(-90)"/>
-                                    </g>
-                                </svg>
-                            </span>
+                            <nuxt-link class="relative z-4 uline flex items-center mont font-medium text-16 leading-none tracking-[-0.64px] w-full h-full" to="/cultivos">
+                                <span class="inline-block mr-8">
+                                    Cultivos
+                                </span>
+                                <span class="inline-block">
+                                    <svg class="cultivos-dropdown-arrow w-[1rem] h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+                                        <g transform="translate(8) rotate(90)">
+                                            <path fill="#3FADE1" id="Shape" class="cls-2" d="M10,1A1,1,0,0,0,8.293.293L5,3.586,1.707.293A1,1,0,1,0,.293,1.707l4,4a1,1,0,0,0,1.415,0l4-4A1,1,0,0,0,10,1Z" transform="translate(2 8) rotate(-90)"/>
+                                        </g>
+                                    </svg>
+                                </span>
+                            </nuxt-link>
 
                             <div class="w-[20rem] pt-30 absolute top-0 left-1/2 -translate-x-1/2">
                                 <div class="cultivos-drop-general w-full gap-15 flex flex-col items-center justify-center bg-[#3FADE1] z-1 rounded-[2.5rem] px-15 py-20">
