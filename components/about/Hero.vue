@@ -5,7 +5,8 @@
                 <section class="relative h-screen s:h-[150dvh]">
                     <div class="absolute inset-0 z-1">
                         <figure class="relative w-full h-full">
-                            <img class="relative w-full h-full object-cover" src="detail-hero-mask.jpg" alt="Product Detail">
+                            <img class="block s:hidden relative w-full h-full object-cover" src="detail-hero-mask.jpg" alt="Product Detail">
+                            <video class="hidden s:block relative w-full h-full object-cover" src="/fondo_about.mp4" autoplay muted playsinline></video>
                         </figure>
                     </div>
                     
@@ -33,11 +34,11 @@
 
                     <div class="block s:hidden absolute top-[58rem] s:top-180 -right-60 z-10 pointer-events-none">
                         <figure class="w-[40rem] s:w-[83rem] h-[25rem] s:h-[66rem] js-t-fades">
-                            <img class="w-full h-full object-contain select-none pointer-events-none" src="about-hand.png" alt="Bioceres Nosotros">
+                            <img class="w-full h-full object-contain select-none pointer-events-none" src="/about-hand.png" alt="Bioceres Nosotros">
                         </figure>
 
                         <figure class="go-down-up absolute top-[-5rem] s:top-[0rem] left-[10rem] s:left-[25rem] w-[3.5rem] s:w-[4.5rem] h-[3.5rem] s:h-[4.5rem]">
-                            <img class="w-full h-full object-contain select-none pointer-events-none" src="bean.png" alt="Bioceres Nosotros">
+                            <img class="w-full h-full object-contain select-none pointer-events-none" src="/bean.png" alt="Bioceres Nosotros">
                         </figure>
                     </div>
                 </section>
@@ -81,14 +82,14 @@
             <div ref="pinnedOverlay" class="hidden s:block absolute top-0 s:right-[-7rem] h-full z-10">
                 <div ref="pinnedContent" class="relative flex items-center justify-center">
                     <figure class="relative top-150 w-[40rem] s:w-[83rem] h-[25rem] s:h-[66rem] js-t-fades">
-                        <img class="w-full h-full object-contain select-none pointer-events-none" src="about-hand.png" alt="Bioceres Nosotros">
+                        <img class="w-full h-full object-contain select-none pointer-events-none" src="/about-hand.png" alt="Bioceres Nosotros">
                     </figure>
 
                     <figure 
                         ref="seed"
                         class="absolute top-[-5rem] s:top-[20rem] left-[10rem] s:left-[24rem] w-[3.5rem] s:w-[3.8rem] h-[3.5rem] s:h-[3.8rem]">
                         <img class="go-down-up w-full h-full object-contain select-none pointer-events-none" 
-                             src="bean.png" 
+                             src="/bean.png" 
                              alt="Bioceres Nosotros">
                     </figure>
                 </div>
@@ -217,18 +218,18 @@ export default {
     z-index: 2;
 }
 
-.go-down-up { 
-    animation: go-down-up 1.85s infinite;
-}
+// .go-down-up { 
+//     animation: go-down-up 1.85s infinite;
+// }
 
-@keyframes go-down-up {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(1rem);
-    }
-}
+// @keyframes go-down-up {
+//     0%, 100% {
+//         transform: translateY(0);
+//     }
+//     50% {
+//         transform: translateY(1rem);
+//     }
+// }
 
 .is-lightblueTransparent {
     .btn-text {

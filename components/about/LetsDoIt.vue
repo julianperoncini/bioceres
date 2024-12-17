@@ -5,7 +5,8 @@
             <div class="absolute inset-0 z-1">
                 <figure class="relative w-full h-full">
                     <div class="overlay absolute inset-0 z-2 select-none pointer-events-none"></div>
-                    <img class="relative w-full h-full object-cover" src="about-lets-do-it.png" alt="Lets Do it - Bioceres">
+                    <img class="block s:hidden relative w-full h-full object-cover" src="/about-lets-do-it.png" alt="Lets Do it - Bioceres">
+                    <video class="hidden s:block relative w-full h-full object-cover" src="/nuestas_raices_empresa.mp4" autoplay muted playsinline></video>
                 </figure>
             </div>
 

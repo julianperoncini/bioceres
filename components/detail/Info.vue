@@ -16,18 +16,14 @@
                         <div class="relative w-full mb-50 s:mb-0">
                             <figure class="relative w-full">
                                 <div class="pt-[105%]"></div>
-                                <img class="absolute inset-0 object-contain bg-black-always" src="" alt="">
-
-                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white z-5">CMS CONTENT EDITABLE</div>
+                                <img class="absolute inset-0 object-contain" src="/HB4_mapa.svg" alt="">
                             </figure>
                         </div>
 
                         <div class="relative w-full">
                             <figure class="relative w-full">
                                 <div class="pt-[105%]"></div>
-                                <img class="absolute inset-0 object-contain bg-black-always" src="" alt="">
-
-                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white z-5">CMS CONTENT EDITABLE</div>
+                                <img class="absolute inset-0 object-contain" src="/hb4_tabla.svg" alt="">
                             </figure>
                         </div>
                     </div>
@@ -48,9 +44,7 @@
                     <div class="relative w-full s:w-[53rem] mx-auto js-s-fade">
                         <figure class="relative w-full">
                             <div class="pt-[105%]"></div>
-                            <img class="absolute inset-0 object-contain bg-black-always" src="" alt="">
-
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white z-5">CMS CONTENT EDITABLE</div>
+                            <img class="absolute inset-0 object-contain" src="/HB4_mapa.svg" alt="">
                         </figure>
                     </div>
                 </div>

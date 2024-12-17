@@ -1,6 +1,10 @@
 <template>
     <div class="relative overflow-hidden js-section-tec-2">
         <div class="relative pt-100 s:pt-260">
+            <div class="hidden s:block absolute top-0 left-0 w-full h-[20%] pointer-events-none select-none">
+                <img class="relative w-full h-full object-cover" src="/about-section-2-behind.png" alt="">
+            </div>
+
             <div class="relative px-20 s:px-240">
 
                 <div class="relative flex flex-col s:flex-row items-start s:gap-x-105 pb-100 js-s-fade">
@@ -12,7 +16,7 @@
 
                     <div class="relative w-full s:w-1/2">
                         <figure class="relative w-full h-[35rem] s:h-[46rem] s:top-[-10rem] mt-20 s:mt-0">
-                            <img class="w-full h-full object-contain" src="drop-tec.png" alt="Bioceres Tec">
+                            <img class="w-full h-full object-contain" src="/tecnologia_tolerancia.png" alt="Bioceres Tec">
                         </figure>
                     </div>
                 </div>
@@ -34,7 +38,7 @@
 
                     <div class="relative w-full s:w-1/2">
                         <figure class="relative w-full h-[46rem] s:top-[-10rem] mt-20 s:mt-0">
-                            <img class="w-full h-full object-contain" src="drop-tec-left.png" alt="Bioceres Tec">
+                            <img class="w-full h-full object-contain" src="/tecnologia_comofunca.png" alt="Bioceres Tec">
                         </figure>
                     </div>
                 </div>
