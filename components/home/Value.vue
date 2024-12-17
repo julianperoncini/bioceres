@@ -6,7 +6,7 @@
                     <h2 class="inter font-bold text-50 s:text-60 leading-none tracking-[-2.4px]">El valor de</h2>
                 </div>
                 <figure class="relative w-full h-[14rem]">
-                    <img class="relative w-full h-full object-contain" src="seed.png" alt="El valor de una semilla">
+                    <img class="relative w-full h-full object-contain" src="/seed.png" alt="El valor de una semilla">
                 </figure>
             </div>
 

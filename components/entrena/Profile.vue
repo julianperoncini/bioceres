@@ -4,7 +4,7 @@
             <div class="absolute inset-0 z-1">
                 <figure class="relative w-full h-full">
                     <div class="overlay absolute inset-0 z-2 select-none pointer-events-none"></div>
-                    <img class="relative w-full h-full object-cover" src="entrenar-bg-info.png" alt="Product Detail">
+                    <img class="relative w-full h-full object-cover" src="/entrenar-bg-info.png" alt="Product Detail">
                 </figure>
             </div>
 
@@ -19,7 +19,7 @@
                     <ul class="relative grid grid-cols-1 s:grid-cols-2 s:gap-x-80 gap-y-35 text-white js-s-fade">
                         <li class="relative flex items-center gap-x-40">
                             <div class="relative w-[3.2rem] h-[3.2rem] flex-shrink-0">
-                                <img class="relative w-full h-full object-contain flex-shrink-0" src="icon-detial-2.svg" alt="">
+                                <img class="relative w-full h-full object-contain flex-shrink-0" src="/icon-detial-2.svg" alt="">
                             </div>
 
                             <div class="relative">
@@ -29,7 +29,7 @@
 
                         <li class="relative flex items-center gap-x-40">
                             <div class="relative w-[3.2rem] h-[3.2rem] flex-shrink-0">
-                                <img class="relative w-full h-full object-contain flex-shrink-0" src="icon-detial-2.svg" alt="">
+                                <img class="relative w-full h-full object-contain flex-shrink-0" src="/icon-detial-2.svg" alt="">
                             </div>
 
                             <div class="relative">
@@ -39,7 +39,7 @@
 
                         <li class="relative flex items-center gap-x-40">
                             <div class="relative w-[3.2rem] h-[3.2rem] flex-shrink-0">
-                                <img class="relative w-full h-full object-contain flex-shrink-0" src="icon-detial-2.svg" alt="">
+                                <img class="relative w-full h-full object-contain flex-shrink-0" src="/icon-detial-2.svg" alt="">
                             </div>
 
                             <div class="relative">
@@ -49,7 +49,7 @@
 
                         <li class="relative flex items-center gap-x-40">
                             <div class="relative w-[3.2rem] h-[3.2rem] flex-shrink-0">
-                                <img class="relative w-full h-full object-contain flex-shrink-0" src="icon-detial-2.svg" alt="">
+                                <img class="relative w-full h-full object-contain flex-shrink-0" src="/icon-detial-2.svg" alt="">
                             </div>
 
                             <div class="relative">
@@ -59,7 +59,7 @@
 
                         <li class="relative flex items-center gap-x-40">
                             <div class="relative w-[3.2rem] h-[3.2rem] flex-shrink-0">
-                                <img class="relative w-full h-full object-contain flex-shrink-0" src="icon-detial-2.svg" alt="">
+                                <img class="relative w-full h-full object-contain flex-shrink-0" src="/icon-detial-2.svg" alt="">
                             </div>
 
                             <div class="relative">
@@ -69,7 +69,7 @@
 
                         <li class="relative flex items-center gap-x-40">
                             <div class="relative w-[3.2rem] h-[3.2rem] flex-shrink-0">
-                                <img class="relative w-full h-full object-contain flex-shrink-0" src="icon-detial-2.svg" alt="">
+                                <img class="relative w-full h-full object-contain flex-shrink-0" src="/icon-detial-2.svg" alt="">
                             </div>
 
                             <div class="relative">

@@ -5,7 +5,7 @@
             <section class="relative py-100 s:py-0 s:h-screen">
                 <div class="absolute inset-0 z-1">
                     <figure class="relative w-full h-full">
-                        <img class="relative w-full h-full object-cover" src="detail-hero-mask.jpg" alt="Product Detail">
+                        <img class="relative w-full h-full object-cover" src="/detail-hero-mask.jpg" alt="Product Detail">
                     </figure>
                 </div>
                 
@@ -32,7 +32,7 @@
                         
                         <div class="relative block s:hidden js-t-fades">
                             <figure class="relative w-full h-[35rem]">
-                                <img class="w-full h-full object-contain" src="trigo-bag.png" alt="Producto Detalle">
+                                <img class="w-full h-full object-contain" src="/trigo-bag.png" alt="Producto Detalle">
                             </figure>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
         <div class="hidden s:block absolute top-0 s:right-[20rem] w-[43rem] h-full z-10">
             <div class="sticky top-0 h-screen flex items-center justify-center js-t-fades">
                 <figure class="relative w-full h-[56rem]">
-                    <img class="w-full h-full object-contain" src="bolsas-VICIA.png" alt="Producto Detalle">
+                    <img class="w-full h-full object-contain" src="/bolsas-VICIA.png" alt="Producto Detalle">
                 </figure>
             </div>
         </div>

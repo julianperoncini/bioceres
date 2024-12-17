@@ -10,7 +10,7 @@
                     <nuxt-link to="/producto-detalle" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
-                                <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
+                                <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
                             </figure>
                         </div>
 
@@ -39,13 +39,13 @@
                     <nuxt-link to="/producto-detalle" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
-                                <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
+                                <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
                             </figure>
                         </div>
 
                         <div class="relative flex flex-col items-center justify-center">
                             <div class="relative pb-10">
-                                <img class="w-[5rem] h-auto object-contain" src="svg-icon-home.png" alt="">
+                                <img class="w-[5rem] h-auto object-contain" src="/svg-icon-home.png" alt="">
                             </div>
 
                             <p class="relative pb-10 mont font-medium text-15 leading-none tracking-[-0.6px]">Soluciones para</p>
@@ -60,7 +60,7 @@
                     <nuxt-link to="/vicia-villosa" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
-                                <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
+                                <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
                             </figure>
                         </div>
 
@@ -87,7 +87,7 @@
                     <div class="absolute inset-0 z-1">
                         <figure class="relative w-full h-full">
                             <div class="absolute inset-0 bg-black opacity-10 z-2"></div>
-                            <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
+                            <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
                         </figure>
                     </div>
 

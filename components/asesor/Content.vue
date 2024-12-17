@@ -138,7 +138,7 @@
 
                                 <div class="relative">
                                     <div class="relative left-[0.2rem] flex-shrink-0 pb-10">
-                                        <img class="w-[2.6rem] scale-[1.2] h-auto object-contain" src="yuyo-icon-asesor.png" alt="">
+                                        <img class="w-[2.6rem] scale-[1.2] h-auto object-contain" src="/yuyo-icon-asesor.png" alt="">
                                     </div>
                                     <div class="relative">
                                         <p class="relative pb-5 inter font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>
@@ -148,7 +148,7 @@
 
                                 <div class="relative">
                                     <div class="relative left-[0.2rem] flex-shrink-0 pb-10">
-                                        <img class="w-[2.6rem] scale-[1.2] h-auto object-contain" src="leafs-icon-asesor.png" alt="">
+                                        <img class="w-[2.6rem] scale-[1.2] h-auto object-contain" src="/leafs-icon-asesor.png" alt="">
                                     </div>
                                     <div class="relative">
                                         <p class="relative inter pb-5 font-medium text-[#25284A] text-17 leading-none tracking-[-0.68px]">Variedad</p>

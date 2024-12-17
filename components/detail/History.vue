@@ -24,7 +24,7 @@
                 <div class="relative grid grid-cols-1 s:grid-cols-3 s:gap-x-30 gap-y-50 s:gap-y-0 px-50 s:px-70 js-s-fade">
                     <div class="card-video relative w-full h-[30rem] rounded-[5rem] overflow-hidden bg-white">
                         <div class="card-video-icon absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <img class="w-full h-full object-contain" src="icon-play-circle.png" alt="Icon Play">
+                            <img class="w-full h-full object-contain" src="/icon-play-circle.png" alt="Icon Play">
                         </div>
                         
                         <figure class="relative w-full h-full"></figure>
@@ -32,7 +32,7 @@
 
                     <div class="card-video relative w-full h-[30rem] rounded-[5rem] overflow-hidden bg-white">
                         <div class="card-video-icon absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <img class="w-full h-full object-contain" src="icon-play-circle.png" alt="Icon Play">
+                            <img class="w-full h-full object-contain" src="/icon-play-circle.png" alt="Icon Play">
                         </div>
 
                         <figure class="relative w-full h-full"></figure>
@@ -40,7 +40,7 @@
 
                     <div class="card-video relative w-full h-[30rem] rounded-[5rem] overflow-hidden bg-white">
                         <div class="card-video-icon absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            <img class="w-full h-full object-contain" src="icon-play-circle.png" alt="Icon Play">
+                            <img class="w-full h-full object-contain" src="/icon-play-circle.png" alt="Icon Play">
                         </div>
 
                         <figure class="relative w-full h-full"></figure>

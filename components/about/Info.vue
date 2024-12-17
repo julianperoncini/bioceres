@@ -28,7 +28,7 @@
 
                     <div class="relative s:pl-70 js-s-fade">
                         <figure class="relative w-[28rem] h-auto">
-                            <img class="w-full h-full object-contain" src="about-leaf.png" alt="About Bioceres">
+                            <img class="w-full h-full object-contain" src="/about-leaf.png" alt="About Bioceres">
 
                             <div class="w-[25rem] absolute bottom-0 left-1/2 -translate-x-1/2">
                                 <img class="w-full h-full" src="/girasol.png" alt="">

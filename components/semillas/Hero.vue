@@ -4,7 +4,7 @@
             <div class="relative w-full h-full flex items-center">
                 <div class="absolute inset-0">
                     <figure class="relative w-full h-full">
-                        <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
+                        <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
                     </figure>
                 </div>
 

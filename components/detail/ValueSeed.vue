@@ -6,7 +6,7 @@
                     <div class="absolute inset-0 z-1">
                         <figure class="relative w-full h-full">
                             <div class="absolute inset-0 bg-black opacity-10 z-2"></div>
-                            <img class="relative w-full h-full object-cover" src="hero-home.jpg" alt="Discover">
+                            <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
                         </figure>
                     </div>
 

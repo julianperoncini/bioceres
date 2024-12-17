@@ -5,7 +5,7 @@
                 <section class="relative h-screen s:h-[150dvh]">
                     <div class="absolute inset-0 z-1">
                         <figure class="relative w-full h-full">
-                            <img class="block s:hidden relative w-full h-full object-cover" src="detail-hero-mask.jpg" alt="Product Detail">
+                            <img class="block s:hidden relative w-full h-full object-cover" src="/detail-hero-mask.jpg" alt="Product Detail">
                             <video class="hidden s:block relative w-full h-full object-cover" src="/fondo_about.mp4" autoplay muted playsinline></video>
                         </figure>
                     </div>

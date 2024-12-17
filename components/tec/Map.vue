@@ -8,7 +8,7 @@
                     <div class="js-map-container relative w-full s:w-[30rem]">
                         <div class="js-map relative w-full h-[50rem] s:h-[60rem] pt-50 s:pt-0 js-s-fade">
                             <figure class="relative w-full h-full z-1 js-s-fade-map">
-                                <img class="w-full h-full object-contain" src="map.png" alt="Bioceres Tec">
+                                <img class="w-full h-full object-contain" src="/map.png" alt="Bioceres Tec">
                             </figure>
 
                             <div class="absolute top-[12.5rem] left-[18.8rem] z-2 select-none pointer-events-none js-s-fade-map">

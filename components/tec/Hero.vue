@@ -3,7 +3,7 @@
         <div class="relative w-full h-full">
             <figure class="relative w-full h-full z-2">
                 <div class="overlay"></div>
-                <img class="relative z-1 w-full h-full object-cover" src="hero-home.jpg" alt="Bioceres">
+                <img class="relative z-1 w-full h-full object-cover" src="/hero-home.jpg" alt="Bioceres">
             </figure>
 
             <div class="z-3 px-20 s:px-240 w-full s:w-[inherit] flex flex-col items-center s:items-start absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
