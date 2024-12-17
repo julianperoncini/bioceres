@@ -45,7 +45,7 @@
         <div class="hidden s:block absolute top-0 s:right-[20rem] w-[43rem] h-full z-10">
             <div class="sticky top-0 h-screen flex items-center justify-center js-t-fades">
                 <figure class="relative w-full h-[56rem]">
-                    <img class="w-full h-full object-contain" src="trigo-bag.png" alt="Producto Detalle">
+                    <img class="w-full h-full object-contain" src="bolsas-VICIA.png" alt="Producto Detalle">
                 </figure>
             </div>
         </div>

@@ -17,6 +17,8 @@
                             <figure class="relative w-full">
                                 <div class="pt-[105%]"></div>
                                 <img class="absolute inset-0 object-contain bg-black-always" src="" alt="">
+
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white z-5">CMS CONTENT EDITABLE</div>
                             </figure>
                         </div>
 
@@ -24,6 +26,8 @@
                             <figure class="relative w-full">
                                 <div class="pt-[105%]"></div>
                                 <img class="absolute inset-0 object-contain bg-black-always" src="" alt="">
+
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white z-5">CMS CONTENT EDITABLE</div>
                             </figure>
                         </div>
                     </div>
@@ -45,6 +49,8 @@
                         <figure class="relative w-full">
                             <div class="pt-[105%]"></div>
                             <img class="absolute inset-0 object-contain bg-black-always" src="" alt="">
+
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white z-5">CMS CONTENT EDITABLE</div>
                         </figure>
                     </div>
                 </div>

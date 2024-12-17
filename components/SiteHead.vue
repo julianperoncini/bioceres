@@ -28,9 +28,9 @@
 
                             <div class="w-[20rem] pt-30 absolute top-0 left-1/2 -translate-x-1/2">
                                 <div class="cultivos-drop-general w-full gap-15 flex flex-col items-center justify-center bg-[#3FADE1] z-1 rounded-[2.5rem] px-15 py-20">
-                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/nuestras-raices">Trigo</nuxt-link>
-                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/nuestras-raices">Soja</nuxt-link>
-                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/nuestras-raices">Vicia Villosa</nuxt-link>
+                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/producto-detalle">Trigo</nuxt-link>
+                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/producto-detalle">Soja</nuxt-link>
+                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/vicia-villosa">Vicia Villosa</nuxt-link>
                                 </div>
                             </div>
                         </div>

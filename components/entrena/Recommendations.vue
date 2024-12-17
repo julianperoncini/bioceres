@@ -61,6 +61,10 @@
 
                 </div>
             </div>
+
+            <div class="relative">
+                <ButtonArrow color="lightblue" label="Ver ficha técnica" />
+            </div>
         </div>
 
         <div class="hidden s:block absolute top-[1rem] right-[-32rem] z-1 js-s-fade">
