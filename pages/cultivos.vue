@@ -1,7 +1,7 @@
 <template>
     <div class="relative">
-        <ProductsHero />
-        <ProductsListProducts />
+        <ProductsHero @category-changed="updateCategory" />
+        <ProductsListProducts :category="currentCategory" />
         <ProductsValueSeed />
     </div>
 </template>
@@ -11,6 +11,17 @@ import Page from '~/mixins/Page'
 
 export default {
     mixins: [Page],
+
+    data() {
+        return {
+            currentCategory: 'all'
+        }
+    },
+    methods: {
+        updateCategory(category) {
+            this.currentCategory = category
+        }
+    }
 }
 </script>
 

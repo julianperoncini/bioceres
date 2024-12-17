@@ -1,5 +1,5 @@
 <template>
-    <div class="relative">
+    <div class="relative z-10">
         <div class="relative w-full h-[50rem]">
             <div class="relative w-full h-full flex items-center">
                 <div class="absolute inset-0">
@@ -23,11 +23,15 @@
 
                         <div class="relative text-20 leading-none tracking-[-0.8px]">
                             <div class="relative">
-                                <select class="select-input mont font-medium relative py-4 px-50 bg-transparent appearance-none cursor-pointer">
-                                    <option selected>ver todos</option>
-                                    <option>Opción 1</option>
-                                    <option>Opción 2</option>
-                                    <option>Opción 3</option>
+                                <select                           
+                                    v-model="selectedCategory"
+                                    @change="filterProducts"
+                                    class="select-input mont font-medium relative py-4 px-50 bg-transparent appearance-none cursor-pointer"
+                                >
+                                    <option value="all">Ver todos</option>
+                                    <option value="Trigo">Trigo</option>
+                                    <option value="Soja">Soja</option>
+                                    <option value="Vicia">Vicia Villosa</option>
                                 </select>
                                 <div class="select-line"></div>
                             </div>
@@ -43,6 +47,24 @@
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            selectedCategory: 'all'
+        }
+    },
+    created() {
+        this.filterProducts()
+    },
+    methods: {
+        filterProducts() {
+            this.$emit('category-changed', this.selectedCategory)
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 .select-input {

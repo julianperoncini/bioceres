@@ -2,67 +2,29 @@
     <div class="relative">
         <div class="relative pt-200 s:pt-180 pb-100 s:pb-120 px-20 s:px-140">
             <div class="relative grid grid-cols-1 s:grid-cols-4 gap-100 s:gap-16">
-                <article class="card-product relative w-full h-[40rem] text-[#25284A] js-t-fades">
+                <nuxt-link 
+                    v-for="product in filteredProducts" 
+                    :key="product.id"
+                    :to="product.link"
+                    class="card-product relative w-full h-[40rem] text-[#25284A] js-t-fades"
+                >
                     <div class="absolute top-[-4rem] left-1/2 -translate-x-1/2 w-[14.5rem] h-[30rem]">
                         <figure class="relative w-full h-full">
-                            <img class="relative w-full h-full object-contain" src="bags.png" alt="Product">
+                            <img class="relative w-full h-full object-contain" :src="product.image" :alt="product.name">
                         </figure>
                     </div>
 
                     <div class="relative py-35 px-20 w-full h-full flex flex-col items-center justify-end">
-                        <h4 class="mont relative pb-15 font-semibold text-20 leading-none tracking-[-0.48px]">Traful HB4®</h4>
+                        <h4 class="mont relative pb-15 font-semibold text-20 leading-none tracking-[-0.48px]">{{ product.name }}</h4>
                         <div class="relative">
                             <Button color="lightblue" label="Ver Más" />
                         </div>
                     </div>
 
-                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-[2.5rem] py-10 s:py-5 px-15 s:px-15 text-white text-11 leading-none tracking-[0.24px] uppercase bg-[#A0C344] pointer-events-none">Nuevo</div>
-                </article>
-
-                <article class="card-product relative w-full h-[40rem] text-[#25284A] js-t-fades">
-                    <div class="absolute top-[-4rem] left-1/2 -translate-x-1/2 w-[14.5rem] h-[30rem]">
-                        <figure class="relative w-full h-full">
-                            <img class="relative w-full h-full object-contain" src="bags.png" alt="Product">
-                        </figure>
+                    <div v-if="product.isNew" class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-[2.5rem] py-10 s:py-5 px-15 s:px-15 text-white text-11 leading-none tracking-[0.24px] uppercase bg-[#A0C344] pointer-events-none">
+                        Nuevo
                     </div>
-
-                    <div class="relative py-35 px-20 w-full h-full flex flex-col items-center justify-end">
-                        <h4 class="mont relative pb-15 font-semibold text-20 leading-none tracking-[-0.48px]">Traful HB4®</h4>
-                        <div class="relative">
-                            <Button color="lightblue" label="Ver Más" />
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card-product relative w-full h-[40rem] text-[#25284A] js-t-fades">
-                    <div class="absolute top-[-4rem] left-1/2 -translate-x-1/2 w-[14.5rem] h-[30rem]">
-                        <figure class="relative w-full h-full">
-                            <img class="relative w-full h-full object-contain" src="bags.png" alt="Product">
-                        </figure>
-                    </div>
-
-                    <div class="relative py-35 px-20 w-full h-full flex flex-col items-center justify-end">
-                        <h4 class="mont relative pb-15 font-semibold text-20 leading-none tracking-[-0.48px]">Traful HB4®</h4>
-                        <div class="relative">
-                            <Button color="lightblue" label="Ver Más" />
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card-product relative w-full h-[40rem] text-[#25284A] js-t-fades">
-                    <div class="absolute top-[-4rem] left-1/2 -translate-x-1/2 w-[14.5rem] h-[30rem]">
-                        <figure class="relative w-full h-full">
-                            <img class="relative w-full h-full object-contain" src="bags.png" alt="Product">
-                        </figure>
-                    </div>
-
-                    <div class="relative py-35 px-20 w-full h-full flex flex-col items-center justify-end">
-                        <h4 class="mont relative pb-15 font-semibold text-20 leading-none tracking-[-0.48px]">Traful HB4®</h4>
-                        <div class="relative">
-                            <Button color="lightblue" label="Ver Más" />
-                        </div>
-                    </div>
-                </article>
+                </nuxt-link>
             </div>
         </div>
     </div>
@@ -70,7 +32,58 @@
 
 <script>
 export default {
-    
+    props: {
+        category: {
+            type: String,
+            default: 'all'
+        }
+    },
+    data() {
+        return {
+            products: [
+                {
+                    id: 1,
+                    name: 'Traful HB4®',
+                    image: 'bags.png',
+                    link: '/producto-detalle',
+                    category: 'Trigo',
+                    isNew: false
+                },
+                {
+                    id: 2,
+                    name: 'Traful HB4®',
+                    image: 'bags.png',
+                    link: '/producto-detalle',
+                    category: 'Trigo',
+                    isNew: true
+                },
+                {
+                    id: 3,
+                    name: 'SOJA ®',
+                    image: 'Bolsa-soja.png',
+                    link: '/producto-detalle',
+                    category: 'Soja',
+                    isNew: false
+                },
+                {
+                    id: 4,
+                    name: 'VICIA ®',
+                    image: 'bolsas-VICIA.png',
+                    link: '/vicia-villosa',
+                    category: 'Vicia',
+                    isNew: false
+                }
+            ]
+        }
+    },
+    computed: {
+        filteredProducts() {
+            if (this.category === 'all') {
+                return this.products
+            }
+            return this.products.filter(product => product.category === this.category)
+        }
+    }
 }
 </script>
 
