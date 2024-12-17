@@ -1,5 +1,5 @@
 <template>
-    <div class="relative overflow-hidden">
+    <div class="relative overflow-hidden js-section-tec-2">
         <div class="relative pt-100 s:pt-260">
             <div class="relative px-20 s:px-240">
 
@@ -228,12 +228,12 @@
 
 .fade-delay-enter-from {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateX(-20px);
 }
 
 .fade-delay-leave-to {
   opacity: 0;
-  transform: translateY(-20px);
+  transform: translateX(20px);
 }
 
 .fade-delay-leave-active {

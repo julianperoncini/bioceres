@@ -230,6 +230,10 @@ hr {
     cursor: pointer;
     transition: all .4s cubic-bezier(0.075, 0.820, 0.165, 1.000);
     
+    .discover-card-bgs {
+        transition: all .5s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+    }
+    
     .discover-card-figure {
         overflow: hidden;
 
@@ -243,7 +247,9 @@ hr {
     }
 
     &:hover {
-        transform: scaleY(1.085);
+        .discover-card-bgs {
+            transform: scaleX(1.03) scaleY(1.06);  
+        }
 
         .discover-card-figure {
             img {
