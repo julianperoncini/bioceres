@@ -11,8 +11,17 @@
           <img 
             :src="slide.image" 
             :alt="slide.alt"
-            class="relative w-full h-full object-cover"
+            class="block s:hidden relative w-full h-full object-cover"
           >
+          <video class="hidden s:block relative w-full h-full object-cover"             
+            :src="slide.video" 
+            :alt="slide.alt"
+            autoplay
+            playsinline
+            muted
+            loop
+          >
+          </video>
         </figure>
 
         <div class="px-20 s:px-0 w-full s:w-[inherit] flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
@@ -65,25 +74,29 @@ data() {
     rotatingInterval: null,
     slides: [
       {
-        image: 'hero-home.jpg',
+        image: '/hero-home.jpg',
+        video: '/hero-video-1.mp4',
         alt: 'Bioceres',
         title: 'Hagamos que crezca tu',
         strongText: 'negocio'
       },
       {
-        image: 'hero-home.jpg',
+        image: '/hero-home.jpg',
+        video: '/hero-video-3.mp4',
         alt: 'Bioceres',
         title: 'Hagamos que crezca tu',
         strongText: 'cultivo'
       },
       {
-        image: 'hero-home.jpg',
+        image: '/hero-home.jpg',
+        video: '/hero-video-1.mp4',
         alt: 'Bioceres',
         title: 'Hagamos que crezca tu',
         strongText: 'rentabilidad'
       },
       {
-        image: 'hero-home.jpg',
+        image: '/hero-home.jpg',
+        video: '/hero-video-3.mp4',
         alt: 'Bioceres',
         title: 'Hagamos que crezca tu',
         strongText: 'comunidad'
