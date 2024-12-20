@@ -5,8 +5,18 @@
                 <div class="relative w-full h-[45rem] rounded-[5rem] overflow-hidden">
                     <div class="absolute inset-0 z-1">
                         <figure class="relative w-full h-full">
-                            <div class="absolute inset-0 bg-black opacity-10 z-2"></div>
-                            <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+                            <div class="absolute inset-0 bg-black opacity-20 z-4"></div>
+                            <img class="block s:hidden relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+
+                            <video class="hidden s:block relative w-full h-full object-cover"             
+                                src="/hero-video-2.mp4" 
+                                alt="Hero Cultivos"
+                                autoplay
+                                playsinline
+                                muted
+                                loop
+                            >
+                            </video>
                         </figure>
                     </div>
 

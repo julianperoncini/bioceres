@@ -3,9 +3,18 @@
         <div class="relative w-full h-[50rem]">
             <div class="relative w-full h-full flex items-center">
                 <div class="absolute inset-0">
-                    <figure class="relative w-full h-full">
+                    <figure class="block s:hidden relative w-full h-full">
                         <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
                     </figure>
+                    <video class="hidden s:block relative w-full h-full object-cover"             
+                        src="/hero-video-1.mp4" 
+                        alt="Hero Cultivos"
+                        autoplay
+                        playsinline
+                        muted
+                        loop
+                    >
+                    </video>
                 </div>
 
                 <div class="relative px-20 s:px-240">

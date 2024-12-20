@@ -118,12 +118,13 @@
                                         mode="out-in"
                                         tag="div"
                                         class="relative w-full h-full"
+                                        :class="`image-slide-${currentStepIndex + 1}`"
                                     >
-                                        <div :key="currentStepIndex" class="relative w-full h-full">
+                                        <div :key="currentStepIndex" class="image-slide-wrap relative w-full h-full">
                                             <img 
                                                 :src="currentStep.image" 
                                                 :alt="currentStep.title"
-                                                class="w-full h-full object-contain bg-black-always"
+                                                class="w-full h-full object-contain "
                                             >
                                         </div>
                                     </TransitionGroup>
@@ -193,25 +194,25 @@
                     title: 'Mejoramiento Genético (Breeding)',
                     description: 'El equipo de Breeding realiza cruzas entre distintas variedades para mejorar el rendimiento, la resistencia a enfermedades y la adaptación a diferentes ambientes. Se seleccionan las mejores plantas en varias generaciones.',
                     duration: '2 años',
-                    image: '/path-to-breeding-image.jpg'
+                    image: '/lineatiempo_1.svg'
                 },
                 {
                     title: 'Evaluación Preliminar',
                     description: 'Las nuevas variedades se prueban en distintas ubicaciones para evaluar su rendimiento, resistencia a enfermedades y adaptción a diferentes condiciones.',
                     duration: '1 año',
-                    image: '/path-to-evaluation-image.jpg'
+                    image: '/lineatiempo_2.svg'
                 },
                 {
                     title: 'Posicionamiento y Recomendaciones Agronómicas',
                     description: 'El equipo de Desarrollo evalúa las variedades en zonas clave, ajustando recomendaciones como fecha de siembra, densidad, resistencia a enfermedades y fertilización, según el potencial de rendimiento en cada ambiente.',
                     duration: '4 años',
-                    image: '/path-to-positioning-image.jpg'
+                    image: '/lineatiempo_3.svg'
                 },
                 {
                     title: 'Comercialización',
                     description: 'La variedad se lanza al mercado, apoyada por actividades de difusión para los productores implementen correctamente las recomendaciones agronómicas.',
                     duration: null,
-                    image: '/path-to-commercialization-image.jpg'
+                    image: '/lineatiempo_4.svg'
                 }
             ]
             }
@@ -232,7 +233,7 @@
 
 .fade-delay-enter-active {
   transition: all 0.5s ease-out;
-  transition-delay: 0.2s;
+  transition-delay: 1s;
 }
 
 .fade-delay-leave-active {
@@ -241,12 +242,12 @@
 
 .fade-delay-enter-from {
   opacity: 0;
-  transform: translateX(-20px);
+  transform: translateX(20px);
 }
 
 .fade-delay-leave-to {
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateX(-20px);
 }
 
 .fade-delay-leave-active {
@@ -269,5 +270,17 @@
 }
 .text-f6edad {
     color: #f6edad;
+}
+
+.image-slide-2 {
+    .image-slide-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 25rem;
+    }
 }
 </style>

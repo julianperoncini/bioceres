@@ -82,7 +82,17 @@
                 <div class="absolute inset-0 z-1">
                     <figure class="relative w-full h-full">
                         <div class="overlay"></div>
-                        <img class="relative w-full h-full object-cover" src="/detial-intro-opts.png" alt="Product Detail">
+                        <img class="block s:hidden relative w-full h-full object-cover" src="/detial-intro-opts.png" alt="Product Detail">
+
+                        <video class="hidden s:block relative w-full h-full object-cover"             
+                                src="/hero-video-3.mp4" 
+                                alt="Hero Cultivos"
+                                autoplay
+                                playsinline
+                                muted
+                                loop
+                            >
+                        </video>
                     </figure>
                 </div>
                 

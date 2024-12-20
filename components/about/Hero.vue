@@ -154,7 +154,6 @@ export default {
                 },
                 x: translateX,
                 y: translateY,
-                scale: scale,
                 ease: 'none'
             })
         },

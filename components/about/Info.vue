@@ -28,16 +28,18 @@
 
                     <div class="relative s:pl-70 js-s-fade">
                         <figure class="relative w-[28rem] h-auto">
-                            <svg class="hidden s:block relative z-3 w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 325.001">
-                                <path id="Subtraction_1" data-name="Subtraction 1" d="M272,325H0V0H272V325ZM269.541,3.953l-.265.177c-36.619,16.929-74.552,27.843-111.236,38.4-25.29,7.277-49.178,14.15-72.455,22.8C12.946,92.306-3.064,158.7,5.3,207.358,14.861,263.014,59.216,319.7,136.75,320.881h.461c37.021,0,71.013-14.686,95.714-41.354A137.167,137.167,0,0,0,269.1,176.183c.36,3.941.535,7.835.535,11.9V3.953Z" fill="#fff"/>
-                            </svg>
+                            <div class="relative w-full h-full overflow-hidden">
+                                <svg class="hidden s:block relative z-3 w-full h-full object-contain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 325.001">
+                                    <path id="Subtraction_1" data-name="Subtraction 1" d="M272,325H0V0H272V325ZM269.541,3.953l-.265.177c-36.619,16.929-74.552,27.843-111.236,38.4-25.29,7.277-49.178,14.15-72.455,22.8C12.946,92.306-3.064,158.7,5.3,207.358,14.861,263.014,59.216,319.7,136.75,320.881h.461c37.021,0,71.013-14.686,95.714-41.354A137.167,137.167,0,0,0,269.1,176.183c.36,3.941.535,7.835.535,11.9V3.953Z" fill="#fff"/>
+                                </svg>
 
-                            <video muted playsinline autoplay loop class="hidden s:block absolute top-0 left-0 w-full h-full object-cover" src="/clouds.mp4"></video>
+                                <video muted playsinline autoplay loop class="hidden s:block absolute top-0 left-0 w-full h-full object-cover" src="/clouds.mp4"></video>
 
-                            <img src="/about-leaf.png" alt="About Bioceres" class="block s:hidden w-full h-full object-contain">
+                                <img src="/about-leaf.png" alt="About Bioceres" class="block s:hidden w-full h-full object-contain">
 
-                            <div class="w-[25rem] absolute bottom-0 s:bottom-[0.4rem] left-1/2 -translate-x-1/2 z-4">
-                                <img class="w-full h-full" src="/girasol.png" alt="">
+                                <div class="w-[25rem] absolute bottom-0 s:bottom-[0.4rem] left-1/2 -translate-x-1/2 z-4">
+                                    <img class="w-full h-full" src="/girasol.png" alt="">
+                                </div>
                             </div>
 
                             <div class="absolute top-[7rem] left-[-8rem] z-4">
