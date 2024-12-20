@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <div class="hidden s:block absolute top-[1rem] right-[-32rem] z-1 js-s-fade">
+        <div class="hidden s:block absolute top-[5rem] right-[-35rem] z-1 js-s-fade">
             <figure class="relative w-[100rem] h-[111rem]">
                 <img class="w-full h-full object-contain select-none pointer-events-none" src="/entrenar-flower.png" alt="Entrenar">
             </figure>

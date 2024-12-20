@@ -42,10 +42,25 @@
                     </div>
 
                     <div class="relative w-full s:w-[53rem] mx-auto js-s-fade">
-                        <figure class="relative w-full">
-                            <div class="pt-[105%]"></div>
-                            <img class="absolute inset-0 object-contain" src="/HB4_mapa.svg" alt="">
-                        </figure>
+                        <div class="flex flex-row items-center justify-center gap-20">
+                            <div class="relative flex flex-col items-end gap-y-20">
+                                <div class="text-[#25284A] inter font-medium text-20 leading-1 tracking-[-0.84px]">Cancro</div>
+
+                                <div class="text-[#25284A] inter font-medium text-20 leading-1 tracking-[-0.84px]">Phytophora</div>
+
+                                <div class="text-[#25284A] inter font-medium text-20 leading-1 tracking-[-0.84px]">Cancro</div>
+                                
+                                
+                            </div>
+
+                            <div class="relative flex flex-col items-start gap-y-20">
+                                <div class="relative rounded-[2rem] bg-[#20611F] w-[32rem] h-[3rem] text-white inter font-medium text-20 leading-1 tracking-[-0.84px] text-center">Resistente</div>
+
+                                <div class="relative rounded-[2rem] bg-[#A0C344] w-[32rem] h-[3rem] text-white inter font-medium text-20 leading-1 tracking-[-0.84px] text-center">R1 - R4</div>
+
+                                <div class="relative rounded-[2rem] bg-[#20611F] w-[32rem] h-[3rem] text-white inter font-medium text-20 leading-1 tracking-[-0.84px] text-center">Resistente</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
