@@ -64,7 +64,7 @@
                             <img class="w-full h-full object-contain" src="drop-tec-right.png" alt="Bioceres Tec">
                         </figure>
 
-                        <figure class="hidden s:block relative w-full h-[46rem] s:h-[61rem] s:top-[-10rem] s:scale-[1.3] mt-20 s:mt-0">
+                        <figure class="hidden s:block relative w-full h-[46rem] s:h-[61rem] 2xl:h-[64rem] s:top-[-10rem] s:scale-[1.3] mt-20 s:mt-0">
                             <svg class="relative z-3 w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 325.001">
                                 <path id="Subtraction_1" data-name="Subtraction 1" d="M272,325H0V0H272V325ZM269.541,3.953l-.265.177c-36.619,16.929-74.552,27.843-111.236,38.4-25.29,7.277-49.178,14.15-72.455,22.8C12.946,92.306-3.064,158.7,5.3,207.358,14.861,263.014,59.216,319.7,136.75,320.881h.461c37.021,0,71.013-14.686,95.714-41.354A137.167,137.167,0,0,0,269.1,176.183c.36,3.941.535,7.835.535,11.9V3.953Z" fill="#fff"/>
                             </svg>
