@@ -26,27 +26,48 @@
                         v-for="(video, index) in videos" 
                         :key="index"
                         class="card-video relative w-full h-[30rem] rounded-[5rem] overflow-hidden bg-white"
-                        @click.prevent="playVideo(index)"
+                        @click="openModal(index)"
                     >
                         <div 
                             class="card-video-icon absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-5"
-                            v-show="!playingVideos[index]"
                         >
                             <img class="w-full h-full object-contain" src="/icon-play-circle.png" alt="Icon Play">
                         </div>
                         
                         <figure class="relative w-full h-full">
-                            <video 
-                                :ref="'video' + index"
+                            <img 
                                 class="w-full h-full object-cover" 
-                                :src="video.src"
-                                @ended="videoEnded(index)"
-                                @click.prevent
-                                playsinline
-                            ></video>
+                                :src="video.thumbnail"
+                                :alt="video.title"
+                            />
                         </figure>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div ref="modalIframe" class="fixed top-0 left-0 w-full h-full bg-black-always bg-opacity-50 z-[9999]" :class="{ 'invisible': !isModalOpen }">
+            <div class="relative w-full h-full flex items-center justify-center">
+                <div class="relative w-[80%] s:w-[60%] h-[25rem] s:h-[60rem]">
+                    <iframe 
+                        class="w-full h-full" 
+                        :src="currentVideoUrl" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+
+            <div class="absolute top-[15rem] s:top-80 right-[4rem] s:right-120">
+                <button @click="closeModal" class="btn-close-frame cursor-pointer w-[6rem] h-[6rem] relative flex items-center justify-center bg-[#3FADE1] rounded-full overflow-hidden" type="button">
+                    <svg class="btn-close-frame-svg w-[1.65rem] s:w-[1.4rem] h-auto" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L12.9602 12.9602" stroke="#F9F7F5" stroke-width="1.5" stroke-linecap="round"/>
+                        <path d="M1 12.9602L12.9602 1" stroke="#F9F7F5" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
@@ -57,38 +78,42 @@ export default {
     data() {
         return {
             videos: [
-                { src: 'static-vid-placehoder.mp4' },
-                { src: 'static-vid-placehoder.mp4' },
-                { src: 'static-vid-placehoder.mp4' }
+                { 
+                    youtubeId: '383__4ZoNVc',
+                    thumbnail: '/detial-intro-opts.png',
+                    title: 'Video Testimonio 1'
+                },
+                { 
+                    youtubeId: '383__4ZoNVc',
+                    thumbnail: '/detial-intro-opts.png',
+                    title: 'Video Testimonio 2'
+                },
+                { 
+                    youtubeId: '383__4ZoNVc',
+                    thumbnail: '/detial-intro-opts.png',
+                    title: 'Video Testimonio 3'
+                }
             ],
-            playingVideos: Array(3).fill(false)
+            isModalOpen: false,
+            currentVideoId: null
+        }
+    },
+    computed: {
+        currentVideoUrl() {
+            if (!this.currentVideoId) return '';
+            return `https://www.youtube.com/embed/${this.currentVideoId}?autoplay=1`;
         }
     },
     methods: {
-        playVideo(index) {
-            const videoElement = this.$refs['video' + index][0] // Access first element of array
-            if (videoElement) {
-                if (this.playingVideos[index]) {
-                    videoElement.pause()
-                    this.$set(this.playingVideos, index, false)
-                } else {
-                    this.pauseAllVideos()
-                    videoElement.play()
-                    this.$set(this.playingVideos, index, true)
-                }
-            }
+        openModal(index) {
+            this.currentVideoId = this.videos[index].youtubeId;
+            this.isModalOpen = true;
+            document.body.style.overflow = 'hidden'; 
         },
-        pauseAllVideos() {
-            this.videos.forEach((_, index) => {
-                const videoElement = this.$refs['video' + index]?.[0] // Access first element and handle potential undefined
-                if (videoElement) {
-                    videoElement.pause()
-                    this.$set(this.playingVideos, index, false)
-                }
-            })
-        },
-        videoEnded(index) {
-            this.$set(this.playingVideos, index, false)
+        closeModal() {
+            this.isModalOpen = false;
+            this.currentVideoId = null;
+            document.body.style.overflow = '';
         }
     }
 }
