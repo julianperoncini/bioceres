@@ -48,7 +48,6 @@
       </div>
     </div>
 
-    <!-- Custom Dots -->
     <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex gap-8 s:gap-4 z-20 pointer-events-none z-[11]">
       <button
         v-for="(_, index) in slides"
@@ -64,110 +63,110 @@
 
 <script>
 export default {
-data() {
-  return {
-    currentSlide: 0,
-    currentRotatingWord: 0,
-    isFirstSlideRotation: true,
-    wordChanged: false,
-    rotatingWords: ['negocio', 'cultivo', 'rentabilidad', 'comunidad'],
-    rotatingInterval: null,
-    slides: [
-      {
-        image: '/hero-home.jpg',
-        video: '/hero-video-1.mp4',
-        alt: 'Bioceres',
-        title: 'Hagamos que crezca tu',
-        strongText: 'negocio'
-      },
-      {
-        image: '/hero-home.jpg',
-        video: '/hero-video-3.mp4',
-        alt: 'Bioceres',
-        title: 'Hagamos que crezca tu',
-        strongText: 'cultivo'
-      },
-      {
-        image: '/hero-home.jpg',
-        video: '/hero-video-1.mp4',
-        alt: 'Bioceres',
-        title: 'Hagamos que crezca tu',
-        strongText: 'rentabilidad'
-      },
-      {
-        image: '/hero-home.jpg',
-        video: '/hero-video-3.mp4',
-        alt: 'Bioceres',
-        title: 'Hagamos que crezca tu',
-        strongText: 'comunidad'
-      }
-    ],
-    autoplayInterval: null
-  }
-},
-
-mounted() {
-  this.startFirstSlideRotation()
-},
-
-beforeDestroy() {
-  this.stopAutoplay()
-  if (this.rotatingInterval) clearInterval(this.rotatingInterval)
-},
-
-methods: {
-  startFirstSlideRotation() {
-    let animationInProgress = false;
-    
-    this.rotatingInterval = setInterval(() => {
-      if (animationInProgress) return;
-      
-      animationInProgress = true;
-      this.wordChanged = true;
-      
-      setTimeout(() => {
-        this.currentRotatingWord = (this.currentRotatingWord + 1) % this.rotatingWords.length;
-        this.wordChanged = false;
-        animationInProgress = false;
-      }, 500);
-      
-    }, 1000);
-
-    setTimeout(() => {
-      clearInterval(this.rotatingInterval);
-      this.isFirstSlideRotation = false;
-      this.startAutoplay();
-    }, 4500);
-  },
-
-  goToSlide(index) {
-    if (!this.isFirstSlideRotation) {
-      this.currentSlide = index
-      this.resetAutoplay()
+  data() {
+    return {
+      currentSlide: 0,
+      currentRotatingWord: 0,
+      isFirstSlideRotation: true,
+      wordChanged: false,
+      rotatingWords: ['negocio', 'cultivo', 'rentabilidad', 'comunidad'],
+      rotatingInterval: null,
+      slides: [
+        {
+          image: '/hero-home.jpg',
+          video: '/hero-video-1.mp4',
+          alt: 'Bioceres',
+          title: 'Hagamos que crezca tu',
+          strongText: 'negocio'
+        },
+        {
+          image: '/hero-home.jpg',
+          video: '/hero-video-3.mp4',
+          alt: 'Bioceres',
+          title: 'Hagamos que crezca tu',
+          strongText: 'cultivo'
+        },
+        {
+          image: '/hero-home.jpg',
+          video: '/hero-video-1.mp4',
+          alt: 'Bioceres',
+          title: 'Hagamos que crezca tu',
+          strongText: 'rentabilidad'
+        },
+        {
+          image: '/hero-home.jpg',
+          video: '/hero-video-3.mp4',
+          alt: 'Bioceres',
+          title: 'Hagamos que crezca tu',
+          strongText: 'comunidad'
+        }
+      ],
+      autoplayInterval: null
     }
   },
 
-  nextSlide() {
-    this.currentSlide = (this.currentSlide + 1) % this.slides.length
+  mounted() {
+    this.startFirstSlideRotation()
   },
 
-  startAutoplay() {
-    this.autoplayInterval = setInterval(() => {
-      this.nextSlide()
-    }, 5500)
-  },
-
-  stopAutoplay() {
-    if (this.autoplayInterval) {
-      clearInterval(this.autoplayInterval)
-    }
-  },
-
-  resetAutoplay() {
+  beforeDestroy() {
     this.stopAutoplay()
-    this.startAutoplay()
+    if (this.rotatingInterval) clearInterval(this.rotatingInterval)
+  },
+
+  methods: {
+    startFirstSlideRotation() {
+      let animationInProgress = false;
+      
+      this.rotatingInterval = setInterval(() => {
+        if (animationInProgress) return;
+        
+        animationInProgress = true;
+        this.wordChanged = true;
+        
+        setTimeout(() => {
+          this.currentRotatingWord = (this.currentRotatingWord + 1) % this.rotatingWords.length;
+          this.wordChanged = false;
+          animationInProgress = false;
+        }, 500);
+        
+      }, 2000);
+
+      setTimeout(() => {
+        clearInterval(this.rotatingInterval);
+        this.isFirstSlideRotation = false;
+        this.startAutoplay();
+      }, 9000);
+    },
+
+    goToSlide(index) {
+      if (!this.isFirstSlideRotation) {
+        this.currentSlide = index
+        this.resetAutoplay()
+      }
+    },
+
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.slides.length
+    },
+
+    startAutoplay() {
+      this.autoplayInterval = setInterval(() => {
+        this.nextSlide()
+      }, 7000)
+    },
+
+    stopAutoplay() {
+      if (this.autoplayInterval) {
+        clearInterval(this.autoplayInterval)
+      }
+    },
+
+    resetAutoplay() {
+      this.stopAutoplay()
+      this.startAutoplay()
+    }
   }
-}
 }
 </script>
 
@@ -186,30 +185,30 @@ methods: {
 }
 
 .dot-button {
-border: none;
-padding: 0;
-cursor: pointer;
-outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
 }
 
 .dot-active {
-background-color: rgb(75, 169, 255);
-transform: scale(1);
+  background-color: rgb(75, 169, 255);
+  transform: scale(1);
 }
 
 .dot-inactive {
-background-color: rgba(128, 128, 128, 0.6);
-transform: scale(0.85);
+  background-color: rgba(128, 128, 128, 0.6);
+  transform: scale(0.85);
 }
 
 .dot-inactive:hover {
-background-color: rgba(128, 128, 128, 0.8);
+  background-color: rgba(128, 128, 128, 0.8);
 }
 
 .word-container {
-position: relative;
-display: inline-block;
-min-width: 200px;
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
 }
 
 .word-animation:first-child {
@@ -217,38 +216,38 @@ min-width: 200px;
 }
 
 .word-animation {
-display: inline-block;
-opacity: 1;
-transform: translateY(0);
-position: absolute;
-top: 0;
-left: 0;
-animation: slideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: slideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .word-animation.animate-out {
-animation: slideOutUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: slideOutUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes slideOutUp {
-0% {
-  opacity: 1;
-  transform: translateY(0);
-}
-100% {
-  opacity: 0;
-  transform: translateY(-20px);
-}
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes slideInUp {
-0% {
-  opacity: 0;
-  transform: translateY(20px);
-}
-100% {
-  opacity: 1;
-  transform: translateY(0);
-}
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
