@@ -3,7 +3,7 @@
         <div class="relative flex items-center justify-between py-20 s:py-35 px-20 s:px-140 bg-white">
             <div class="relative z-[999] w-[13.5rem] s:w-[16rem] h-auto">
                 <nuxt-link class="relative w-full h-full" to="/">
-                    <img class="relative w-full h-full object-contain" src="logo.png" alt="Bioceres Logo">
+                    <img class="relative w-full h-full object-contain" src="/logo.png" alt="Bioceres Logo">
                 </nuxt-link>
             </div>
 
@@ -15,7 +15,8 @@
 
                     <li class="relative">
                         <div class="cultivos-dropdown z-2 cursor-pointer flex items-center relative mont font-medium text-16 leading-none tracking-[-0.64px] w-full h-full">
-                            <nuxt-link class="relative z-4 uline flex items-center mont font-medium text-16 leading-none tracking-[-0.64px] w-full h-full" to="/cultivos">
+                            
+                            <button class="relative z-4 uline flex items-center mont font-medium text-16 leading-none tracking-[-0.64px] w-full h-full">
                                 <span class="inline-block mr-8">
                                     Cultivos
                                 </span>
@@ -26,15 +27,16 @@
                                         </g>
                                     </svg>
                                 </span>
-                            </nuxt-link>
+                            </button>
 
-                            <div class="w-[20rem] pt-30 absolute top-0 left-1/2 -translate-x-1/2">
-                                <div class="cultivos-drop-general w-full gap-15 flex flex-col items-center justify-center bg-[#3FADE1] z-1 rounded-[2.5rem] px-15 py-20">
-                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/producto-detalle">Trigo</nuxt-link>
-                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/producto-detalle">Soja</nuxt-link>
+                            <div class="w-[20rem] pt-30 absolute top-0 left-1/2 -translate-x-1/2 cultivos-drop-general">
+                                <div class=" w-full gap-15 flex flex-col items-center justify-center bg-[#3FADE1] z-1 rounded-[2.5rem] px-15 py-20">
+                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/cultivos-trigo">Trigo</nuxt-link>
+                                    <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/cultivos-soja">Soja</nuxt-link>
                                     <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-16 leading-none tracking-[-0.64px] text-white h-full" to="/vicia-villosa">Vicia Villosa</nuxt-link>
                                 </div>
                             </div>
+                            
                         </div>
                     </li>
 

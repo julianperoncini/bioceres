@@ -13,10 +13,11 @@
                     <div class="relative w-full h-full s:h-screen flex items-center">
                         <div class="relative mt-[-12rem] s:mt-0 pl-20 s:pl-240 z-3">
                             <div class="relative pb-50 js-t-fades">
-                                <h1 class="mont font-medium relative text-[#3FADE1] text-50 leading-[1.1] tracking-[-2px]">
-                                    <span class="block">Todo empieza</span>
-                                    <span class="block">con <strong class="mont font-extrabold">una semilla</strong></span>
+                                <h1 v-html=" strip_tags($prismic.asHtml(field.titulo),'strong br') " 
+                                class="mont font-medium relative text-[#3FADE1] text-50 leading-[1.1] tracking-[-2px] strong-bolder">
                                 </h1>
+                                <!-- <span class="block">Todo empieza</span>
+                                    <span class="block">con <strong class="mont font-extrabold">una semilla</strong></span> -->
                             </div>
 
                             <div class="relative js-t-fades">
@@ -46,10 +47,12 @@
                 <section class="relative px-20 s:px-240 pb-100">
                     <div class="relative pt-100 s:pt-170 pb-50 s:pb-100 flex flex-col s:flex-row items-center justify-between">
                         <div class="relative pb-30 s:pb-0 max-w-full s:max-w-[50rem] w-full">
-                            <h2 class="mont font-semibold text-[#A0C344] text-45 leading-none tracking-[-1.8px] pb-20 js-s-lines">Bioceres fue <br> fundada en 2001</h2>
-                            <p class="inter font-normal text-[#25284A] text-18 leading-[1.35] tracking-[-0.72px] js-s-fade">
-                                En un salón prestado en la Bolsa de Comercio de Rosario. La compañía surgió gracias a la iniciativa de <strong class="font-bold">23 productores agropecuarios,</strong> muchos de los cuales eran miembros de Aapresid, frente a la necesidad de encontrar respuestas que contrarrestaran la erosión y el deterioro que los suelos sufrían debido a la intensificación de la actividad.
-                            </p>
+                            <h2 class="mont font-semibold text-[#A0C344] text-45 leading-none tracking-[-1.8px] pb-20 js-s-lines strong-bolder" v-html="strip_tags($prismic.asHtml(field.intro_titulo),'strong br')"></h2>
+                            <div class="inter font-normal text-[#25284A] text-18 leading-[1.35] tracking-[-0.72px] js-s-fade strong-bolder">
+                                <prismic-rich-text
+                                    :field="field.intro_texto"
+                                />
+                            </div>
                         </div>
 
                         <div class="relative block s:hidden js-s-fade">
@@ -105,6 +108,11 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
+    props:{
+        field:{
+            type: Object
+        }
+    },
     data() {
         return {
             windowWidth: 0,
@@ -201,6 +209,17 @@ export default {
                 duration: 0.5,
                 ease: 'power1.out'
             })
+        },
+
+        strip_tags(html, allowed_tags){
+            allowed_tags = allowed_tags.trim()
+            
+            if (allowed_tags) {
+                allowed_tags = allowed_tags.split(/\s+/).map(function(tag){ return "/?" + tag });
+                allowed_tags = "(?!" + allowed_tags.join("|") + ")";
+            }
+
+            return html.replace(new RegExp("(<" + allowed_tags + ".*?>)", "gi"), "");
         }
     }
 }

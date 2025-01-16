@@ -6,7 +6,8 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@14islands/lerp": "^1.0.3",
@@ -18,10 +19,12 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/gtm": "^2.4.0",
     "@nuxtjs/markdownit": "^2.0.0",
+    "@nuxtjs/prismic": "^1.4.2",
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sanity": "^0.10.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/style-resources": "^1.2.1",
+    "@prismicio/slice-simulator-vue": "^0.2.1",
     "@rive-app/canvas": "^1.0.98",
     "@sanity/client": "^3.2.0",
     "@sanity/image-url": "^1.0.1",
@@ -50,6 +53,7 @@
     "moment-timezone": "^0.5.43",
     "nuxt": "^2.15.7",
     "ogl": "^0.0.84",
+    "papaparse": "^5.4.1",
     "pathseg": "^1.2.1",
     "poly-decomp": "^0.3.0",
     "postprocessing": "^6.23.3",
@@ -63,6 +67,7 @@
     "three": "^0.147.0",
     "troika-three-text": "^0.45.0",
     "virtual-scroll": "^2.1.1",
+    "vue": "^2.7.16",
     "vue-datocms": "^4.0.5",
     "vue-gtag": "^2.0.1",
     "vue-multi-ref": "^2.0.1"
@@ -72,6 +77,7 @@
     "@nuxtjs/tailwindcss": "^4.2.1",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.4",
+    "slice-machine-ui": "^0.5.1",
     "tailwindcss": "^2.2.19"
   }
 }

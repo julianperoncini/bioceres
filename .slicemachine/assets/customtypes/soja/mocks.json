@@ -1,0 +1,53 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "soja",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "nuevo": true,
+    "nombre": "step",
+    "descripcion": [
+      {
+        "type": "paragraph",
+        "text": "Consequat minim commodo exercitation sit aliqua in in officia amet commodo culpa eiusmod labore. Officia esse culpa proident reprehenderit.",
+        "spans": []
+      }
+    ],
+    "imagen": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    },
+    "grupo_madurez": "3 largo",
+    "imagen_siembra_1": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88"
+    },
+    "imagen_siembra_2": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
+    },
+    "slices": []
+  }
+}

@@ -6,7 +6,16 @@
                     <div class="absolute inset-0 z-1">
                         <figure class="relative w-full h-full">
                             <div class="absolute inset-0 bg-black opacity-10 z-2"></div>
-                            <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+                            <!-- <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover"> -->
+                            <video class="hidden s:block relative w-full h-full object-cover"             
+                                :src="video.url" 
+                                alt="Hero Cultivos"
+                                autoplay
+                                playsinline
+                                muted
+                                loop
+                            >
+                            </video>
                         </figure>
                     </div>
 
@@ -15,7 +24,9 @@
                         <p class="relative text-center inter font-normal text-20 s:text-26 leading-[1.1] tracking-[-1.04px]">Ingresá los datos de tu campo y descargá una recomendación personalizada de variedad y manejo agronómico para tu lote</p>
 
                         <div class="relative mt-45">
-                            <ButtonArrow />
+                            <ButtonArrow 
+                                href="/asesor-inteligente"
+                            />
                         </div>
                     </div>
                 </div>
@@ -23,3 +34,13 @@
         </div>
     </div>
 </template>
+<script>
+
+export default {
+    props: {
+        video: {
+            type: Object
+        },
+    }
+}
+</script>

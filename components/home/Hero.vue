@@ -2,31 +2,32 @@
   <div class="relative w-full h-screen">
     <div ref="sliderContainer" class="slider-container h-full">
       <div 
-        v-for="(slide, index) in slides" 
+        v-for="(slide, index) in sliders.items" 
         :key="index"
         class="slide absolute w-full h-full"
         :class="{ active: currentSlide === index }"
       >
         <figure class="relative w-full h-full">
-          <img 
-            :src="slide.image" 
-            :alt="slide.alt"
-            class="block s:hidden relative w-full h-full object-cover"
-          >
-          <video class="hidden s:block relative w-full h-full object-cover"             
-            :src="slide.video" 
-            :alt="slide.alt"
+          <video v-if="slide.background_video && slide.background_video.url" class="hidden s:block relative w-full h-full object-cover"             
+            :src="slide.background_video.url" 
+            :alt="slide.background_video.alt"
             autoplay
             playsinline
             muted
             loop
           >
           </video>
+          <img 
+            v-else
+            :src="slide.background_image.url" 
+            :alt="slide.background_image.alt"
+            class="block relative w-full h-full object-cover"
+          >
         </figure>
 
         <div class="px-20 s:px-0 w-full s:w-[inherit] flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
           <h1 class="mont text-center s:text-left font-semibold text-50 leading-none tracking-[-2px] js-t-fades">
-            {{ slide.title }} 
+            {{ slide.title_slider }} 
             <strong class="mont font-extrabold relative overflow-hidden">
               <div class="word-container">
                 <span 
@@ -36,13 +37,18 @@
                 >
                   {{ rotatingWords[currentRotatingWord] }}
                 </span>
-                <span v-else>{{ slide.strongText }}</span>
+                <span v-else>{{ slide.strong_text_slider }}</span>
               </div>
             </strong>
           </h1>
 
           <div class="relative mt-40 js-t-fades">
-            <ButtonArrow />
+          
+            <ButtonArrow
+              v-if="slide.cta_boton && slide.link_boton.url"
+              :label="slide.cta_boton"
+              :href="slide.link_boton.url"
+            />
           </div>
         </div>
       </div>
@@ -50,7 +56,7 @@
 
     <div class="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex gap-8 s:gap-4 z-20 pointer-events-none z-[11]">
       <button
-        v-for="(_, index) in slides"
+        v-for="(_, index) in sliders.items"
         :key="index"
         @click="goToSlide(index)"
         class="dot-button w-[1.2rem] h-[1.2rem] rounded-full transition-all duration-500 pointer-events-auto"
@@ -59,10 +65,16 @@
       ></button>
     </div>
   </div>
+
 </template>
 
 <script>
 export default {
+  props: {
+    sliders: {
+        type: Object
+    },
+  },
   data() {
     return {
       currentSlide: 0,
@@ -107,6 +119,7 @@ export default {
 
   mounted() {
     this.startFirstSlideRotation()
+    console.log(this.sliders[0])
   },
 
   beforeDestroy() {

@@ -14,7 +14,7 @@
 
                     <div class="relative max-w-[30rem] s:max-w-[70rem] mx-auto js-s-fade">
                         <p class="inter font-normal text-center text-20 s:text-26 leading-[1.35] tracking-[-1.04px]">
-                            Testimonios y casos de éxito de <span class="inter font-semibold">Trigo TRAFUL HB4</span> en suelos 
+                            Testimonios y casos de éxito de <span class="inter font-semibold">{{product.data.nombre}}</span> en suelos 
                             donde cada semilla importa. <span class="inter font-semibold">Descubrí las experiencias en 
                             primera persona, de nuestros clientes:</span>
                         </p>
@@ -74,7 +74,15 @@
 </template>
 
 <script>
+import Page from '~/mixins/Page'
+
 export default {
+    mixins: [Page],
+    props: {
+        product:{
+            type: Object,            
+        }
+    },
     data() {
         return {
             videos: [

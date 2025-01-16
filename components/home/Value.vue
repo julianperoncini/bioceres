@@ -24,7 +24,7 @@
             </div>
 
             <div class="relative mt-50 s:mt-75 js-s-fade">
-                <ButtonArrow color="lightblue" label="Descubrí quienes somos" />
+                <ButtonArrow color="lightblue" label="Descubrí quienes somos" href="/nuestras-raices" />
             </div>
         </div>
     </div>

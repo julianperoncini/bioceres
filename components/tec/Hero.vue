@@ -5,7 +5,7 @@
                 <div class="overlay"></div>
                 <img class="block s:hidden relative z-1 w-full h-full object-cover" src="/hero-home.jpg" alt="Bioceres">
                 <video class="hidden s:block relative w-full h-full object-cover"             
-                    src="/hero-video-3.mp4" 
+                    :src="video.url" 
                     alt="Hero Tec"
                     autoplay
                     playsinline
@@ -15,10 +15,7 @@
             </figure>
 
             <div class="z-3 px-20 s:px-240 w-full s:w-[inherit] flex flex-col items-center s:items-start absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
-                <h1 class="mont text-center s:text-left font-semibold text-40 s:text-50 leading-none tracking-[-2px] js-t-fades">
-                    Tecnología diseñada <br>
-                    para los <strong class="mont font-extrabold">desafíos</strong> <br>
-                    <strong class="mont font-extrabold">climáticos del futuro.</strong>
+                <h1 class="mont text-center s:text-left font-semibold text-40 s:text-50 leading-none tracking-[-2px] js-t-fades strong-bolder" v-html=" strip_tags($prismic.asHtml(titulo),'strong br') " >
                 </h1>
 
                 <div class="relative mt-40 js-t-fades">
@@ -38,10 +35,28 @@
 
 <script>
 export default {
+    props:{
+        titulo:{
+            type: Array
+        },
+        video:{
+            type: Object
+        }
+    },
     methods: {
         scrollToSection() {
             const section = document.querySelector('.js-section-tec-2');
             section.scrollIntoView({ behavior: 'smooth' });
+        },
+        strip_tags(html, allowed_tags){
+            allowed_tags = allowed_tags.trim()
+            
+            if (allowed_tags) {
+                allowed_tags = allowed_tags.split(/\s+/).map(function(tag){ return "/?" + tag });
+                allowed_tags = "(?!" + allowed_tags.join("|") + ")";
+            }
+
+            return html.replace(new RegExp("(<" + allowed_tags + ".*?>)", "gi"), "");
         }
     }
 }

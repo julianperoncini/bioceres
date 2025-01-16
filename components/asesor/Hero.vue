@@ -4,7 +4,16 @@
             <div class="relative w-full h-full flex items-center">
                 <div class="absolute inset-0">
                     <figure class="relative w-full h-full">
-                        <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+                        <!-- <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover"> -->
+                        <video class="relative w-full h-full object-cover"             
+                                :src="video.url" 
+                                :alt="video.name"
+                                autoplay
+                                playsinline
+                                muted
+                                loop
+                            >
+                            </video>
                     </figure>
                 </div>
 
@@ -18,7 +27,15 @@
         </div>
     </div>
 </template>
-
+<script>
+export default {
+    props:{
+        video:{
+            type:Object
+        }
+    }
+}
+</script>
 <style lang="scss" scoped>
 .select-input {
     appearance: none;

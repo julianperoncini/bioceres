@@ -5,23 +5,23 @@
                 <nuxt-link 
                     v-for="product in filteredProducts" 
                     :key="product.id"
-                    :to="product.link"
-                    class="card-product relative w-full h-[40rem] text-[#25284A] js-t-fades"
+                    :to="`/${product.type}/${product.uid}/`"
+                    class="card-product relative w-full h-[40rem] text-[#25284A] js-t-fades mb-60"
                 >
                     <div class="absolute top-[-4rem] left-1/2 -translate-x-1/2 w-[14.5rem] h-[30rem]">
                         <figure class="relative w-full h-full">
-                            <img class="relative w-full h-full object-contain" :src="product.image" :alt="product.name">
+                            <img class="relative w-full h-full object-contain" :src="product.data.imagen.url" :alt="product.data.imagen.alt">
                         </figure>
                     </div>
 
                     <div class="relative py-35 px-20 w-full h-full flex flex-col items-center justify-end">
-                        <h4 class="mont relative pb-15 font-semibold text-20 leading-none tracking-[-0.48px]">{{ product.name }}</h4>
+                        <h4 class="mont relative pb-15 font-semibold text-20 leading-none tracking-[-0.48px]">{{ product.data.nombre }}</h4>
                         <div class="relative">
                             <Button color="lightblue" label="Ver Más" />
                         </div>
                     </div>
 
-                    <div v-if="product.isNew" class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-[2.5rem] py-10 s:py-5 px-15 s:px-15 text-white text-11 leading-none tracking-[0.24px] uppercase bg-[#A0C344] pointer-events-none">
+                    <div v-if="product.data.nuevo" class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-[2.5rem] py-10 s:py-5 px-15 s:px-15 text-white text-11 leading-none tracking-[0.24px] uppercase bg-[#A0C344] pointer-events-none">
                         Nuevo
                     </div>
                 </nuxt-link>
@@ -36,6 +36,12 @@ export default {
         category: {
             type: String,
             default: 'all'
+        },
+        posts:{
+            type: Array,
+        },
+        type:{
+            type: String,
         }
     },
     data() {
@@ -79,9 +85,13 @@ export default {
     computed: {
         filteredProducts() {
             if (this.category === 'all') {
-                return this.products
+                return this.posts
             }
-            return this.products.filter(product => product.category === this.category)
+            if(this.type == 'trigo'){
+                return this.posts.filter(product => product.data.ciclo === this.category)
+            }else{
+                return this.posts.filter(product => product.data.grupo_madurez === this.category)
+            }
         }
     }
 }

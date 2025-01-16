@@ -38,9 +38,7 @@
                                     class="select-input text-center mont font-medium relative py-4 px-50 bg-transparent appearance-none cursor-pointer"
                                 >
                                     <option value="all">Ver todos</option>
-                                    <option value="Trigo">Trigo</option>
-                                    <option value="Soja">Soja</option>
-                                    <option value="Vicia">Vicia Villosa</option>
+                                    <option v-for="(op,i) in options" :key="i" :value="op">{{ op }}</option>
                                 </select>
                                 <div class="select-line"></div>
                             </div>
@@ -59,6 +57,11 @@
 
 <script>
 export default {
+    props:{
+        options:{
+            type: Array
+        }
+    },
     data() {
         return {
             selectedCategory: 'all'

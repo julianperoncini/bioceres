@@ -84,7 +84,8 @@
                 
                 <div class="relative js-s-fade">
                     <div class="relative s:h-[55rem] rounded-[2.5rem] s:rounded-[3rem] overflow-hidden transition-colors duration-500 ease-in-out"
-                        :class="backgroundColors[currentStepIndex]">
+                        :style="`background-color:${currentStep.color}`">
+                        <!-- :class="backgroundColors[currentStepIndex]" -->
                         <div class="relative flex flex-col s:flex-row items-start w-full h-full p-30 s:p-100">
                             <!-- Content Section -->
                             <div class="relative pb-40 w-full s:w-[58rem]">
@@ -97,19 +98,18 @@
                                     >
                                         <div :key="currentStepIndex" class="relative flex flex-col items-start gap-y-20">
                                             <h3 class="relative mont font-bold text-28 s:text-34 leading-none tracking-[-1.36px]">
-                                                {{ currentStep.title }}
+                                                {{ currentStep.titulo }}
                                             </h3>
                                             <p class="relative inter font-normal text-20 s:text-24 leading-[1.35] tracking-[-0.96px]">
-                                                {{ currentStep.description }}
+                                                {{ currentStep.texto }}
                                             </p>
                                             <p v-if="currentStep.duration" class="relative inter font-normal text-24 s:text-34 leading-none tracking-[-1.36px]">
-                                                Duración {{ currentStep.duration }}
+                                                Duración {{ currentStep.duracion }}
                                             </p>
                                         </div>
                                     </TransitionGroup>
                                 </div>
                             </div>
-
                             <!-- Image Section -->
                             <div class="relative w-full s:w-[auto] s:absolute s:top-1/2 s:right-80 s:-translate-y-1/2">
                                 <div class="relative w-full s:w-[37rem] h-[28rem] s:h-[37rem] rounded-full overflow-hidden">
@@ -122,8 +122,8 @@
                                     >
                                         <div :key="currentStepIndex" class="image-slide-wrap relative w-full h-full">
                                             <img 
-                                                :src="currentStep.image" 
-                                                :alt="currentStep.title"
+                                                :src="currentStep.imagen.url" 
+                                                :alt="currentStep.titulo"
                                                 class="w-full h-full object-contain "
                                             >
                                         </div>
@@ -135,28 +135,24 @@
                         <!-- Navigation Buttons -->
                         <div 
                             class="mb-40 s:mb-0 flex s:block flex-col items-center justify-center relative s:absolute s:bottom-60 s:left-100 mx-auto s:mx-0 w-[fit-content] rounded-[2.5rem] s:rounded-[3rem] p-6"
-                            :class="[
-                                currentStepIndex === index 
-                                    ? 'bg-white'
-                                    : `${backgroundColorsNav[currentStepIndex]}`,
-                                ]"
+                            
+                            :style="`background-color:#ffffff40`"
                         >
                             <button 
-                                v-for="(step, index) in steps" 
+                                v-for="(step, index) in stepss" 
                                 :key="index"
                                 @click="currentStepIndex = index"
                                 class="relative inter font-normal w-[fit-content] rounded-[3rem] py-10 px-40 text-17 leading-none tracking-[-0.68px] transition-all duration-300"
                                 :class="[
                                 currentStepIndex === index 
                                     ? 'bg-white' 
-                                    : `${backgroundColorsNav[currentStepIndex]} hover:bg-white/10`,
-                                currentStepIndex === index 
-                                    ? `text-${textColorsNav[currentStepIndex]}` 
-                                    : 'text-white'
+                                    : `bg-transparent`,
+                                    
                                 ]"
+                                :style="currentStepIndex === index ? `color:${currentStep.color}` : `color:white`"
                                 type="button"
                             >
-                                Paso {{ index + 1 }}
+                                {{ step.label_tab }}
                             </button>
                         </div>
                     </div>
@@ -168,6 +164,11 @@
 
 <script>
     export default {
+        props:{
+            stepss:{
+                type: Array
+            }
+        },
         data() {
             return {
             currentStepIndex: 0,
@@ -219,7 +220,8 @@
         },
         computed: {
             currentStep() {
-            return this.steps[this.currentStepIndex]
+                return this.stepss[this.currentStepIndex]
+            //return this.steps[this.currentStepIndex]
             }
         }
     }

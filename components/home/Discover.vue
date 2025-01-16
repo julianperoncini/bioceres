@@ -1,16 +1,27 @@
 <template>
     <div class="relative">
+        
         <div class="relative px-20 s:px-140 pt-100 s:pt-140 pb-50 s:pb-200">
             <div class="relative">
                 <div class="relative mb-40 w-full flex items-center justify-center">
                     <h2 class="text-center mont font-medium text-[#25284A] text-30 leading-none tracking-[-1.2px] js-s-lines">Descubrí nuestras soluciones <br> <strong class="mont font-bold">para que tu negocio crezca:</strong></h2>
                 </div>
-
                 <div class="relative grid grid-cols-1 s:grid-cols-3 items-center justify-center s:gap-x-16 gap-y-30 s:gap-y-0 pb-100 s:pb-65 js-s-fade">
-                    <nuxt-link to="/producto-detalle" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
+                    
+                    <nuxt-link to="/cultivos-trigo" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
-                                <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+                                <!-- <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover"> -->
+                                
+                                <video class="relative w-full h-full object-cover"             
+                                    :src="VideoTrigo.url" 
+                                    :alt="VideoTrigo.name"
+                                    autoplay
+                                    playsinline
+                                    muted
+                                    loop
+                                >
+                                </video>
                             </figure>
                         </div>
 
@@ -36,10 +47,19 @@
                         </div>
                     </nuxt-link>
 
-                    <nuxt-link to="/producto-detalle" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
+                    <nuxt-link to="/cultivos-soja" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
-                                <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+                                <!-- <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover"> -->
+                                <video class="relative w-full h-full object-cover"             
+                                    :src="VideoSoja.url" 
+                                    :alt="VideoSoja.name"
+                                    autoplay
+                                    playsinline
+                                    muted
+                                    loop
+                                >
+                                </video>
                             </figure>
                         </div>
 
@@ -60,7 +80,16 @@
                     <nuxt-link to="/vicia-villosa" class="discover-card relative w-full h-[30rem] text-white flex items-center justify-center">
                         <div class="discover-card-bgs absolute inset-0 rounded-[5.7rem] overflow-hidden">
                             <figure class="relative w-full h-full discover-card-figure">
-                                <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+                                <!-- <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover"> -->
+                                <video class="relative w-full h-full object-cover"             
+                                    :src="VideoVicia.url" 
+                                    :alt="VideoVicia.name"
+                                    autoplay
+                                    playsinline
+                                    muted
+                                    loop
+                                >
+                                </video>
                             </figure>
                         </div>
 
@@ -84,10 +113,19 @@
                 </div>
 
                 <div class="relative w-full h-[45rem] rounded-[5rem] overflow-hidden js-s-fade">
-                    <div class="absolute inset-0 z-1">
+                    <div class="absolute inset-0 z-1 overflow-hidden">
                         <figure class="relative w-full h-full">
                             <div class="absolute inset-0 bg-black opacity-10 z-2"></div>
-                            <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+                            <!-- <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover"> -->
+                            <video class="relative w-full h-full object-cover"             
+                                :src="VideoAsesor.url" 
+                                :alt="VideoAsesor.name"
+                                autoplay
+                                playsinline
+                                muted
+                                loop
+                            >
+                            </video>
                         </figure>
                     </div>
 
@@ -96,7 +134,7 @@
                         <p class="relative text-center font-normal inter text-20 s:text-26 leading-[1.1] tracking-[-1.04px]">Ingresá los datos de tu campo y descargá una recomendación personalizada de variedad y manejo agronómico para tu lote</p>
 
                         <div class="relative mt-45">
-                            <ButtonArrow color="white" label="¡Probalo Gratis ahora!" />
+                            <ButtonArrow color="white" label="¡Probalo Gratis ahora!" href="/asesor-inteligente" />
                         </div>
                     </div>
                 </div>
@@ -104,3 +142,21 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    props: {
+        VideoSoja: {
+            type: Object
+        },
+        VideoTrigo: {
+            type: Object
+        },
+        VideoVicia:{
+            type: Object
+        },
+        VideoAsesor:{
+            type: Object
+        }
+    }
+}
+</script>

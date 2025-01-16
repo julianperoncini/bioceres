@@ -1,8 +1,8 @@
 <template>
     <div class="relative">
-        <AboutHero />
-        <AboutInfo />
-        <AboutLetsDoIt />
+        <AboutHero :field="about" />        
+        <AboutInfo :field="about" />
+        <AboutLetsDoIt :field="about" />
     </div>
 </template>
 
@@ -11,6 +11,15 @@ import Page from '~/mixins/Page'
 
 export default {
     mixins: [Page],
+
+    async asyncData({$prismic, params, store}){
+		// const homepage = await $prismic.api.getByUID('page', 'home')
+		const about = await $prismic.api.getSingle('nuestras_raices')
+        console.log(about.data)
+        return {
+            about: about.data
+        }
+    }
 }
 </script>
 

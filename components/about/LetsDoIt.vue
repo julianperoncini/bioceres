@@ -6,7 +6,7 @@
                 <figure class="relative w-full h-full">
                     <div class="overlay absolute inset-0 z-2 select-none pointer-events-none"></div>
                     <img class="block s:hidden relative w-full h-full object-cover" src="/about-lets-do-it.png" alt="Lets Do it - Bioceres">
-                    <video class="hidden s:block relative w-full h-full object-cover" src="/nuestas_raices_empresa.mp4" autoplay muted playsinline></video>
+                    <video class="hidden s:block relative w-full h-full object-cover" :src="field.prefooter_video.url" autoplay muted loop playsinline></video>
                 </figure>
             </div>
 
@@ -18,17 +18,33 @@
                 </div>
 
                 <div class="relative max-w-[30rem] s:max-w-[66rem] mx-auto pb-35">
-                    <p class="text-center inter font-regular text-20 s:text-26 leading-[1.35] tracking-[-1.04px] js-s-fade">Somos una compañía gestada por personas que comparten un mismo propósito: el <strong class="font-bold">desarrollo permanente del agro, generando oportunidades para una producción sostenible en el tiempo, asegurando el futuro de las próximas generaciones.</strong> Hicimos posible un sueño que nos inspiró hace 20 años cuando nos dijimos:</p>
+                    <div class="text-center inter font-regular text-20 s:text-26 leading-[1.35] tracking-[-1.04px] js-s-fade strong-bolder">
+                        <prismic-rich-text
+                            :field="field.prefooter_texto"
+                        />
+                    </div>
                 </div>
 
                 <div class="relative">
-                    <h3 class="mont font-semibold text-center text-45 leading-none tracking-[-1.8px] js-s-lines">Hagamos que crezca.</h3>
+                    <h3 class="mont font-semibold text-center text-45 leading-none tracking-[-1.8px] js-s-lines">{{field.prefooter_title}}</h3>
                 </div>
             </div>
 
         </div>
     </div>
 </template>
+
+<script>
+
+export default {
+    props:{
+        field:{
+            type: Object
+        }
+    }
+}
+
+</script>
 
 <style lang="scss" scoped>
 .overlay {

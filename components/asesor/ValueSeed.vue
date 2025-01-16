@@ -6,7 +6,16 @@
                     <div class="absolute inset-0 z-1">
                         <figure class="relative w-full h-full">
                             <div class="absolute inset-0 bg-black opacity-10 z-2"></div>
-                            <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover">
+                            <!-- <img class="relative w-full h-full object-cover" src="/hero-home.jpg" alt="Discover"> -->
+                            <video class="hidden s:block relative w-full h-full object-cover"             
+                                :src="video.url" 
+                                alt="Hero Cultivos"
+                                autoplay
+                                playsinline
+                                muted
+                                loop
+                            >
+                            </video>                        
                         </figure>
                     </div>
 
@@ -15,7 +24,7 @@
                         <p class="relative text-center mont font-normal text-20 s:text-26 leading-[1.1] tracking-[-1.04px]">Conocé nuestra red de multiplicadores y descubrí al asesor más cercano a tu campo.</p>
 
                         <div class="relative mt-45">
-                            <ButtonArrow color="white" label="Encontrá al tuyo" />
+                            <ButtonArrow color="white" label="Encontrá al tuyo" href="/como-comprar" />
                         </div>
                     </div>
                 </div>
@@ -23,3 +32,13 @@
         </div>
     </div>
 </template>
+<script>
+
+export default {
+    props: {
+        video: {
+            type: Object
+        },
+    }
+}
+</script>

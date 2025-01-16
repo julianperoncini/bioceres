@@ -183,6 +183,9 @@ textarea {
 .inter {
     font-family: 'inter';
 }
+.strong-bolder{
+    strong{font-weight: 800}
+}
 
 @import 'variables';
 @import 'typo';

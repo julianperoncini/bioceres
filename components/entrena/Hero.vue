@@ -21,18 +21,20 @@
 
                         <div class="relative pb-50">
                             <h1 class="relative pb-20 s:pb-30 text-40 s:text-50 leading-[1.1] tracking-[-2px] js-t-fades">
-                                <span class="mont font-semibold flex text-[#a0c344]">Entrená tu suelo</span>
+                                <span class="mont font-semibold flex text-[#a0c344]">{{page.titulo}}</span>
                                 <span class="flex mont font-bold text-[#171F49]">con Vicia villosa</span>
                             </h1>
 
                             <div class="relative max-w-[30rem] s:max-w-[49rem] js-t-fades">
-                                <p class="inter font-regular text-20 s:text-22 leading-[1.2] tracking-[-0.88px] text-[#25284A]">Descubrí el cultivo de cobertura que te ayuda a preparar tu lote para la próxima siembra.</p>
+                                <div class="inter font-regular text-20 s:text-22 leading-[1.2] tracking-[-0.88px] text-[#25284A]">
+                                    <prismic-rich-text :field="page.texto_hero"></prismic-rich-text>
+                                </div>
                             </div>
                         </div>
                         
                         <div class="relative block s:hidden js-t-fades">
                             <figure class="relative w-full h-[35rem]">
-                                <img class="w-full h-full object-contain" src="/trigo-bag.png" alt="Producto Detalle">
+                                <img class="w-full h-full object-contain" :src="page.imagen.url" alt="Producto Detalle">
                             </figure>
                         </div>
                     </div>
@@ -45,7 +47,7 @@
         <div class="hidden s:block absolute top-0 s:right-[20rem] w-[43rem] h-full z-10">
             <div class="sticky top-0 h-screen flex items-center justify-center js-t-fades">
                 <figure class="relative w-full h-[56rem]">
-                    <img class="w-full h-full object-contain" src="/bolsas-VICIA.png" alt="Producto Detalle">
+                    <img class="w-full h-full object-contain" :src="page.imagen.url" alt="Producto Detalle">
                 </figure>
             </div>
         </div>
@@ -53,6 +55,16 @@
     </div>
 </template>
 
+<script>
+
+export default {
+    props: {
+        page: {
+            type: Object
+        },
+    }
+}
+</script>
 <style lang="scss" scoped>
 .overlay {
     background: rgba(0, 0, 0, 0.18);

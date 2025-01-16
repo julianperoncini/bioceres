@@ -21,17 +21,17 @@
                         <ul class="flex flex-col items-start">
                             <li class="relative pb-30 s:pb-60">
                                 <p class="inter font-medium relative pb-10 text-20 leading-[1.1] tracking-[-0.8px] text-[#25284A]">Tempranas</p>
-                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">desde marzo hasta principios de abril</p>
+                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">{{ page.recomendaciones[0].fecha_tempranas }}</p>
                             </li>
 
                             <li class="relative pb-30 s:pb-60">
                                 <p class="inter font-medium relative pb-10 text-20 leading-[1.1] tracking-[-0.8px] text-[#25284A]">Intermedias</p>
-                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">desde la segunda quincena de abril hasta la primera quincena de mayo</p>
+                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">{{ page.recomendaciones[0].fecha_intermedias }}</p>
                             </li>
 
                             <li class="relative pb-30 s:pb-60">
                                 <p class="inter font-medium relative pb-10 text-20 leading-[1.1] tracking-[-0.8px] text-[#25284A]">Tardías</p>
-                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">desde la segunda quincena de mayo hasta fin de junio</p>
+                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">{{ page.recomendaciones[0].fecha_tardias }}</p>
                             </li>
                         </ul>
                     </div>
@@ -44,17 +44,12 @@
                         <ul class="flex flex-col items-start">
                             <li class="relative pb-30 s:pb-60">
                                 <p class="inter font-medium relative pb-10 text-20 leading-[1.1] tracking-[-0.8px] text-[#25284A]">Fechas tempranas y ambientes de alto potencial de producción</p>
-                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">desde marzo hasta principios de abril</p>
+                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">{{ page.recomendaciones[0].densidad_alto }}</p>
                             </li>
 
                             <li class="relative pb-30 s:pb-60">
-                                <p class="inter font-medium relative pb-10 text-20 leading-[1.1] tracking-[-0.8px] text-[#25284A]">Intermedias</p>
-                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">desde la segunda quincena de abril hasta la primera quincena de mayo</p>
-                            </li>
-
-                            <li class="relative pb-30 s:pb-60">
-                                <p class="inter font-medium relative pb-10 text-20 leading-[1.1] tracking-[-0.8px] text-[#25284A]">Tardías</p>
-                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">desde la segunda quincena de mayo hasta fin de junio</p>
+                                <p class="inter font-medium relative pb-10 text-20 leading-[1.1] tracking-[-0.8px] text-[#25284A]">Fechas medias - tardías y ambientes de potencial medio de producción</p>
+                                <p class="inter font-semibold text-25 leading-[1.1] tracking-[-1px] text-[#3FADE1]">{{ page.recomendaciones[0].densidad_medio }}</p>
                             </li>
                         </ul>
                     </div>
@@ -63,7 +58,7 @@
             </div>
 
             <div class="relative">
-                <ButtonArrow color="lightblue" label="Ver ficha técnica" />
+                <ButtonArrow color="lightblue" :href="page.ficha_tecnica.url" :tipo="`external`" label="Ver ficha técnica" />
             </div>
         </div>
 
@@ -74,3 +69,22 @@
         </div>
     </div>
 </template>
+<script>
+import Page from '~/mixins/Page'
+
+export default {
+    mixins: [Page],
+    props: {
+        page:{
+            type: Object,            
+        }
+    },
+    data() {
+        return {
+        }
+    },
+    methods: {
+        
+    }
+}
+</script>

@@ -25,7 +25,7 @@
                         <p class="relative text-center font-normal text-20 s:text-26 leading-[1.1] tracking-[-1.04px]">Ingresá los datos de tu campo y descargá una recomendación personalizada de variedad y manejo agronómico para tu lote</p>
                         
                         <div class="relative mt-45">
-                            <ButtonArrow color="white" label="¡Probalo Gratis ahora!" />
+                            <ButtonArrow color="white" label="¡Probalo Gratis ahora!" href="/asesor-inteligente" />
                         </div>
                     </div>
                 </div>

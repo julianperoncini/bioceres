@@ -59,15 +59,16 @@
                     </div>
 
                     <div class="relative w-full s:w-[55rem] flex flex-col items-start gap-y-50 s:gap-y-100 s:pt-100 s:pr-100 js-s-fade">
-                        <div class="relative flex flex-col items-start gap-y-10 s:gap-y-20">
+                        
+                        <div v-for="(m, i) in map" :key="i" class="relative flex flex-col items-start gap-y-10 s:gap-y-20">
                             <h2 class="inter font-medium text-[#A0C344] text-60 s:text-100 leading-none tracking-[-4px]">
-                                +<span class="js-count" data-value="60">0</span>
+                                +<span class="js-count" :data-value="m.numero_mapa">0</span>
                             </h2>
-                            <p class="inter font-medium text-[#3FADE1] text-30 s:text-40 leading-none tracking-[-1.6px]">ambientes</p>
-                            <p class="inter font-normal text-[#25284A] text-20 leading-[1.35] tracking-[-0.96px]">Falta texto que integre Trigo y Soja evaluados cada año que nos aseguran un correcto posicionamiento de nuestros productos en cada una de las regiones agroecológicas.</p>
+                            <p class="inter font-medium text-[#3FADE1] text-30 s:text-40 leading-none tracking-[-1.6px]">{{m.titulo_mapa}}</p>
+                            <p class="inter font-normal text-[#25284A] text-20 leading-[1.35] tracking-[-0.96px]">{{ strip_tags($prismic.asHtml( m.texto_mapa),'strong br')  }}</p>
                         </div>
 
-                        <div class="relative flex flex-col items-start gap-y-10 s:gap-y-20">
+                        <!-- <div class="relative flex flex-col items-start gap-y-10 s:gap-y-20">
                             <h2 class="inter font-medium text-[#A0C344] text-60 s:text-100 leading-none tracking-[-4px]">
                                 +<span class="js-count" data-value="1200">0</span>
                             </h2>
@@ -81,7 +82,7 @@
                             </h2>
                             <p class="inter font-medium text-[#3FADE1] text-30 s:text-40 leading-none tracking-[-1.6px]">localidades</p>
                             <p class="inter font-normal text-[#25284A] text-20 leading-[1.35] tracking-[-0.96px]">de evaluación en ensayos de Soja y Trigo</p>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -96,6 +97,11 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 export default {
+    props:{
+        map:{
+            type: Array
+        }
+    },
     mounted() {
         this.$nextTick(() => {
             // Map pins animation
@@ -152,6 +158,18 @@ export default {
                 })
             })
         })
+    },
+    methods:{
+        strip_tags(html, allowed_tags){
+            allowed_tags = allowed_tags.trim()
+            
+            if (allowed_tags) {
+                allowed_tags = allowed_tags.split(/\s+/).map(function(tag){ return "/?" + tag });
+                allowed_tags = "(?!" + allowed_tags.join("|") + ")";
+            }
+
+            return html.replace(new RegExp("(<" + allowed_tags + ".*?>)", "gi"), "");
+        }
     }
 }
 </script>
