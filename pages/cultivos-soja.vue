@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <ProductsHero @category-changed="updateCategory" :options="madurez" />
+        <ProductsHero @category-changed="updateCategory" :options="madurez" :type="`Soja`"  />
         <ProductsListProducts :category="currentCategory" :posts="soja" :type="`soja`" />
         <ProductsValueSeed />
     </div>

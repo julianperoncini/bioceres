@@ -66,8 +66,13 @@
                         <nuxt-link class="uline relative mont font-medium text-26 leading-none tracking-[-0.64px] w-full h-full" to="/nuestras-raices">Nuestras Raíces</nuxt-link>
                     </li>
 
-                    <li class="relative">
-                        <nuxt-link class="uline relative mont font-medium text-26 leading-none tracking-[-0.64px] w-full h-full" to="/cultivos">Cultivos</nuxt-link>
+                    <li class="relative w-[80%]">
+                        <div class="uline relative mont font-medium text-26 leading-none tracking-[-0.64px] w-full justify-center">Cultivos</div>
+                        <div class=" w-full gap-15 flex flex-col items-center justify-center bg-[#3FADE1] z-1 rounded-[1.5rem] px-15 py-20 mt-10">
+                            <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-20 py-6 leading-none tracking-[-0.64px] text-white h-full" to="/cultivos-trigo">Trigo</nuxt-link>
+                            <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-20 py-6 leading-none tracking-[-0.64px] text-white h-full" to="/cultivos-soja">Soja</nuxt-link>
+                            <nuxt-link class="uline w-[fit-content] text-center flex items-center justify-center relative mont font-medium text-20 py-6 leading-none tracking-[-0.64px] text-white h-full" to="/vicia-villosa">Vicia Villosa</nuxt-link>
+                        </div>
                     </li>
 
                     <li class="relative">

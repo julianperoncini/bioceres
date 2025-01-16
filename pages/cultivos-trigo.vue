@@ -1,6 +1,6 @@
 <template>
     <div class="relative">
-        <ProductsHero @category-changed="updateCategory" :options="ciclos"/>
+        <ProductsHero @category-changed="updateCategory" :options="ciclos" :type="`Trigo`" />
      
         <ProductsListProducts :category="currentCategory" :posts="trigo" :type="`trigo`" />
 
